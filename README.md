@@ -49,17 +49,26 @@ Real `.env` files are ignored by Git.
 
 ## Install Dependencies
 
+From the project root:
+
+```bash
+npm install --prefix client
+npm install --prefix server
+```
+
+Or install them separately:
+
 Install frontend dependencies:
 
 ```bash
-cd /Users/alitumay/Desktop/Lazer/laser-machine-app/client
+cd client
 npm install
 ```
 
 Install backend dependencies:
 
 ```bash
-cd /Users/alitumay/Desktop/Lazer/laser-machine-app/server
+cd server
 npm install
 ```
 
@@ -68,14 +77,14 @@ npm install
 Start the backend:
 
 ```bash
-cd /Users/alitumay/Desktop/Lazer/laser-machine-app/server
+cd server
 npm run dev
 ```
 
 Start the frontend in another terminal:
 
 ```bash
-cd /Users/alitumay/Desktop/Lazer/laser-machine-app/client
+cd client
 npm run dev
 ```
 
@@ -90,7 +99,6 @@ The Vite dev server proxies `/api` requests to the backend.
 Run everything from the project root:
 
 ```bash
-cd /Users/alitumay/Desktop/Lazer/laser-machine-app
 npm test
 ```
 
@@ -143,7 +151,6 @@ Main routes:
 To initialize Git for this folder:
 
 ```bash
-cd /Users/alitumay/Desktop/Lazer/laser-machine-app
 git init
 git add .
 git commit -m "Initial commit"

@@ -1,5 +1,55 @@
-# Vue 3 + Vite
+# Client
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Vue 3 + Vite frontend for the Laser Machine App.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Commands
+
+Install dependencies:
+
+```bash
+cd client
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+## Environment
+
+This app uses:
+
+```env
+VITE_API_BASE_URL=/api
+```
+
+The local env file is:
+
+```text
+client/.env
+```
+
+The example template is:
+
+```text
+client/.env.example
+```
+
+## Notes
+
+- During local development, Vite proxies `/api` requests to `http://localhost:4000`.
+- The main project setup and full-stack run instructions are documented in the root `README.md`.
