@@ -1,0 +1,11 @@
+# Environment files
+server/.env
+client/.env
+
+# Dependency and build outputs
+server/node_modules
+client/node_modules
+client/dist
+
+# OS/editor files
+.DS_Store
