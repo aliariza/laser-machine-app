@@ -9,6 +9,22 @@
           </p>
         </div>
       </div>
+      <div v-if="!isBackendConnected" class="status-banner">
+        <div>
+          <h2 class="status-banner-title">Backend not connected yet</h2>
+          <p class="status-banner-text">
+            {{ backendMessage }}
+          </p>
+        </div>
+        <button
+          type="button"
+          class="status-banner-action"
+          @click="loadInitialData"
+          :disabled="isLoadingInitialData"
+        >
+          {{ isLoadingInitialData ? "Checking..." : "Try Again" }}
+        </button>
+      </div>
       <MachineFormCard
         :powers="powers"
         :form="form"
@@ -121,6 +137,7 @@ const {
   pageStart,
   pageEnd,
   visiblePageNumbers,
+  loadInitialData,
   resetForm,
   editMachine,
   copyMachine,
@@ -144,10 +161,12 @@ const {
   isExporting,
   isImporting,
   isDeleting,
+  isLoadingInitialData,
+  isBackendConnected,
+  backendMessage,
 } = useMachinePage(showToast);
 onMounted(async () => {
-  await fetchPowers();
-  await fetchMachines();
+  await loadInitialData();
 });
 </script>
 
@@ -194,6 +213,53 @@ onMounted(async () => {
   margin-top: 24px;
 }
 
+.status-banner {
+  margin-bottom: 24px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  border: 1px solid #fed7aa;
+  background: linear-gradient(135deg, #fff7ed 0%, #fffbeb 100%);
+  color: #9a3412;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.status-banner-title {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #9a3412;
+}
+
+.status-banner-text {
+  margin: 0;
+  max-width: 760px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #9a3412;
+}
+
+.status-banner-action {
+  height: 42px;
+  border: 1px solid #fdba74;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #9a3412;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 0 16px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.status-banner-action:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
 .section-title {
   margin: 0 0 16px;
   font-size: 20px;
@@ -227,6 +293,11 @@ onMounted(async () => {
 
   .page-title {
     font-size: 24px;
+  }
+
+  .status-banner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .page-credit {

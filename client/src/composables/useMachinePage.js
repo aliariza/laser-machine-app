@@ -40,6 +40,9 @@ export function useMachinePage(showToast = null) {
   const isExporting = ref(false);
   const isImporting = ref(false);
   const isDeleting = ref(false);
+  const isLoadingInitialData = ref(false);
+  const isBackendConnected = ref(true);
+  const backendMessage = ref("");
 
   const defaultForm = () => ({
     powerId: "",
@@ -198,11 +201,40 @@ export function useMachinePage(showToast = null) {
   }
 
   async function fetchPowers() {
-    powers.value = await fetchPowersRequest();
+    const data = await fetchPowersRequest();
+    powers.value = data;
+    isBackendConnected.value = true;
+    backendMessage.value = "";
   }
 
   async function fetchMachines() {
-    machines.value = await fetchMachinesRequest();
+    const data = await fetchMachinesRequest();
+    machines.value = data;
+    isBackendConnected.value = true;
+    backendMessage.value = "";
+  }
+
+  function setBackendUnavailable() {
+    isBackendConnected.value = false;
+    backendMessage.value =
+      "Backend not connected yet. The interface is live, but saving and loading records will work after the API is deployed.";
+  }
+
+  async function loadInitialData() {
+    if (isLoadingInitialData.value) return;
+
+    isLoadingInitialData.value = true;
+
+    try {
+      await Promise.all([fetchPowers(), fetchMachines()]);
+    } catch (error) {
+      powers.value = [];
+      machines.value = [];
+      setBackendUnavailable();
+      notify("Backend not connected yet", "info");
+    } finally {
+      isLoadingInitialData.value = false;
+    }
   }
 
 async function addPower() {
@@ -439,9 +471,13 @@ async function importExcel(event) {
     exportSelectedExcel,
     importExcel,
     clearFilters,
+    loadInitialData,
     isSaving,
     isExporting,
     isImporting,
     isDeleting,
+    isLoadingInitialData,
+    isBackendConnected,
+    backendMessage,
   };
 }
