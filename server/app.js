@@ -5,8 +5,17 @@ const powerRoutes = require("./routes/powers");
 const machineRoutes = require("./routes/machines");
 
 const app = express();
+const corsOrigin = process.env.CORS_ORIGIN;
 
-app.use(cors());
+app.use(
+  cors(
+    corsOrigin
+      ? {
+          origin: corsOrigin.split(",").map((value) => value.trim()),
+        }
+      : undefined
+  )
+);
 app.use(express.json());
 
 app.get("/api/health", (req, res) => {

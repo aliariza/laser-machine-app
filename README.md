@@ -33,6 +33,7 @@ Server:
 ```env
 PORT=4000
 MONGODB_URI=mongodb://127.0.0.1:27017/laser_machine_app
+CORS_ORIGIN=http://localhost:5173
 ```
 
 Client:
@@ -93,6 +94,7 @@ Default URLs:
 - backend: `http://localhost:4000`
 
 The Vite dev server proxies `/api` requests to the backend.
+When you deploy the backend, set `CORS_ORIGIN` to your Vercel domain.
 
 ## Testing And Checks
 
