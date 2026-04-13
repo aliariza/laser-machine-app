@@ -1,7 +1,12 @@
 {
   "name": "laser-machine-app",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
+    "start": "npm --prefix server start",
+    "heroku-postbuild": "npm install --prefix server",
     "test": "npm --prefix server test && npm --prefix client run build",
     "test:server": "npm --prefix server test",
     "test:client": "npm --prefix client run build"

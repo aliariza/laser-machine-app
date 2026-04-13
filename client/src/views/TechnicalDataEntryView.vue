@@ -71,6 +71,9 @@
         @next-page="goToNextPage"
         />
       </div>
+      <div class="page-credit">
+        Designed by <span>Ali TUMAY</span>
+      </div>
     </div>
 
     <ToastMessage
@@ -198,6 +201,20 @@ onMounted(async () => {
   color: #1f2937;
 }
 
+.page-credit {
+  margin-top: 18px;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.page-credit span {
+  color: #0f172a;
+}
+
 @media (max-width: 700px) {
   .page {
     padding: 20px 14px 32px;
@@ -210,6 +227,10 @@ onMounted(async () => {
 
   .page-title {
     font-size: 24px;
+  }
+
+  .page-credit {
+    text-align: center;
   }
 }
 </style>
