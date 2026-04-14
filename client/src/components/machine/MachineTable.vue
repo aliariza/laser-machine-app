@@ -106,7 +106,7 @@
               <button
                 type="button"
                 class="danger icon-btn"
-                @click="$emit('delete', machine._id)"
+                @click="$emit('delete', machine)"
                 title="Sil"
                 :disabled="isDeleting"
                 aria-label="Kaydı sil"

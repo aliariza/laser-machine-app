@@ -298,15 +298,34 @@ async function saveMachine() {
     isSaving.value = false;
   }
 }
-async function deleteMachine(machineId) {
+function buildDeleteMessage(machine) {
+  const model = machine?.model?.trim() || "Bu makine";
+  const power = machine?.powerId?.name?.trim() || "";
+  const machineType = machine?.machineType?.trim() || "";
+
+  const detailParts = [model, power, machineType].filter(Boolean);
+  const detailText = detailParts.join(" ");
+
+  return `${detailText} silinecek. Emin misiniz?\nBu işlemin geri dönüşü yoktur.`;
+}
+
+async function deleteMachine(machine) {
   if (isDeleting.value) return;
+
+  if (!machine?._id) {
+    notify("Silinecek makine bilgisi bulunamadı", "error");
+    return;
+  }
+
+  const confirmed = window.confirm(buildDeleteMessage(machine));
+  if (!confirmed) return;
 
   isDeleting.value = true;
 
   try {
-    await deleteMachineRequest(machineId);
+    await deleteMachineRequest(machine._id);
     selectedMachineIds.value = selectedMachineIds.value.filter(
-      (id) => id !== machineId
+      (id) => id !== machine._id
     );
     await fetchMachines();
     await fetchPowers();
