@@ -11,6 +11,8 @@ import {
   exportAllMachinesRequest,
   exportSelectedMachinesRequest,
   fetchMachinesRequest,
+  getAllMachinesExcelExportUrl,
+  getMachineExcelExportUrl,
   importMachinesExcelRequest,
   updateMachineRequest,
 } from "../services/machineService";
@@ -343,14 +345,23 @@ async function deleteMachine(machineId) {
     window.URL.revokeObjectURL(url);
   }
 
+  function downloadExcelFromUrl(url) {
+    const link = document.createElement("a");
+    link.href = url;
+    link.target = "_blank";
+    link.rel = "noopener";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }
+
 async function exportSingleMachine(machine) {
   if (isExporting.value) return;
 
   isExporting.value = true;
 
   try {
-    const blobData = await exportSelectedMachinesRequest([machine._id]);
-    downloadExcelBlob(blobData, buildExportFileName(machine));
+    downloadExcelFromUrl(getMachineExcelExportUrl(machine._id));
     notify("Excel dışa aktarma tamamlandı", "success");
   } catch (error) {
     notify("Excel dışa aktarma başarısız", "error");
@@ -364,8 +375,7 @@ async function exportExcel() {
   isExporting.value = true;
 
   try {
-    const blobData = await exportAllMachinesRequest();
-    downloadExcelBlob(blobData, "Tumex_Makine_Listesi.xlsx");
+    downloadExcelFromUrl(getAllMachinesExcelExportUrl());
     notify("Tüm makineler Excel'e aktarıldı", "success");
   } catch (error) {
     notify("Tüm makineler Excel'e aktarılamadı", "error");

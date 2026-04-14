@@ -29,6 +29,10 @@ export async function exportSelectedMachinesRequest(machineIds) {
   return response.data;
 }
 
+export function getMachineExcelExportUrl(machineId) {
+  return `${api.defaults.baseURL}/machines/export/excel/machine/${machineId}`;
+}
+
 export async function importMachinesExcelRequest(file) {
   const formData = new FormData();
   formData.append("file", file);

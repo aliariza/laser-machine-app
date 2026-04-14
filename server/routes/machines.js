@@ -31,6 +31,235 @@ function isValidMachineId(id) {
   return mongoose.isValidObjectId(id);
 }
 
+async function exportMachinesWorkbook(res, machines) {
+  const workbook = new ExcelJS.Workbook();
+  workbook.creator = "Laser Machine App";
+  workbook.created = new Date();
+
+  const makeBorder = (style = "thin") => ({
+    top: { style },
+    left: { style },
+    bottom: { style },
+    right: { style },
+  });
+
+  for (let index = 0; index < machines.length; index += 1) {
+    const machine = machines[index];
+
+    const safeSheetName = `${machine.model || "Machine"}_${index + 1}`
+      .replace(/[\\/*?:[\]]/g, "")
+      .slice(0, 31);
+
+    const ws = workbook.addWorksheet(safeSheetName, {
+      views: [{ showGridLines: false }],
+    });
+
+    ws.pageSetup = {
+      paperSize: 9,
+      orientation: "portrait",
+      scale: 100,
+      fitToPage: false,
+      printTitlesRow: "5:5",
+      margins: {
+        left: 0.3,
+        right: 0.3,
+        top: 0.4,
+        bottom: 0.4,
+        header: 0.2,
+        footer: 0.2,
+      },
+    };
+    ws.headerFooter = {
+      differentOddEven: false,
+      differentFirst: false,
+      oddFooter: "&LTumex Ltd. Şti.&RSayfa &P / &N",
+    };
+
+    ws.columns = [
+      { width: 4 },
+      { width: 22 },
+      { width: 18 },
+      { width: 22 },
+      { width: 24 },
+      { width: 4 },
+    ];
+
+    const center = { vertical: "middle", horizontal: "center", wrapText: true };
+
+    ws.mergeCells("B2:E3");
+    const titleCell = ws.getCell("B2");
+
+    const dynamicTitleParts = [
+      machine.powerId?.name || "",
+      machine.model || "",
+      "TEKNİK ÖZELLİKLER",
+    ].filter(Boolean);
+
+    titleCell.value = dynamicTitleParts.join(" ");
+    titleCell.font = { name: "Mulish", bold: true, size: 18 };
+    titleCell.alignment = center;
+    titleCell.border = makeBorder("medium");
+    titleCell.fill = {
+      type: "pattern",
+      pattern: "solid",
+      fgColor: { argb: "FFE7E7E7" },
+    };
+
+    ws.mergeCells("B5:C5");
+    ws.mergeCells("D5:E5");
+
+    const leftHeader = ws.getCell("B5");
+    leftHeader.value = "ÖZELLİKLER";
+    leftHeader.font = {
+      name: "Verdana",
+      bold: true,
+      size: 14,
+    };
+    leftHeader.alignment = center;
+    leftHeader.border = makeBorder("thin");
+    leftHeader.fill = {
+      type: "pattern",
+      pattern: "solid",
+      fgColor: { argb: "FFFFFFFF" },
+    };
+
+    const rightHeader = ws.getCell("D5");
+    rightHeader.value = "DEĞERLER";
+    rightHeader.font = { name: "Verdana", bold: true, size: 14 };
+    rightHeader.alignment = center;
+    rightHeader.border = makeBorder("thin");
+    rightHeader.fill = {
+      type: "pattern",
+      pattern: "solid",
+      fgColor: { argb: "FFFFFFFF" },
+    };
+
+    ws.getCell("C5").border = makeBorder("thin");
+    ws.getCell("E5").border = makeBorder("thin");
+    ws.getRow(5).height = 35;
+
+    ws.mergeCells("B6:E11");
+    for (let r = 6; r <= 11; r += 1) {
+      ws.getRow(r).height = 25;
+    }
+
+    const imageCell = ws.getCell("B6");
+    imageCell.value = machine.model || "";
+    imageCell.font = { bold: true, size: 13 };
+    imageCell.alignment = { vertical: "top", horizontal: "center", wrapText: true };
+    imageCell.border = makeBorder("thin");
+    imageCell.fill = {
+      type: "pattern",
+      pattern: "solid",
+      fgColor: { argb: "FFFFFFFF" },
+    };
+
+    if (machine.imagePath) {
+      const absoluteImagePath = path.join(__dirname, "..", machine.imagePath);
+
+      if (fs.existsSync(absoluteImagePath)) {
+        const extension = path.extname(absoluteImagePath).replace(".", "").toLowerCase();
+
+        if (["png", "jpg", "jpeg"].includes(extension)) {
+          const imageId = workbook.addImage({
+            filename: absoluteImagePath,
+            extension: extension === "jpg" ? "jpeg" : extension,
+          });
+
+          ws.addImage(imageId, {
+            tl: { col: 2.1, row: 6.1 },
+            ext: { width: 300, height: 150 },
+          });
+        }
+      }
+    }
+
+    const rows = [
+      { name: "Güç", value: machine.powerId?.name || "" },
+      { name: "Tabla Tipi", value: machine.tableType || "" },
+      { name: "Makine Tipi", value: machine.machineType || "" },
+      { name: "Model", value: machine.model || "" },
+      ...machine.specifications.map((spec) => ({
+        name: spec.key || "",
+        value: spec.value || "",
+      })),
+    ];
+
+    let rowNo = 12;
+    rows.forEach((item, index) => {
+      ws.mergeCells(`B${rowNo}:C${rowNo}`);
+      ws.mergeCells(`D${rowNo}:E${rowNo}`);
+
+      const nameCell = ws.getCell(`B${rowNo}`);
+      const valueCell = ws.getCell(`D${rowNo}`);
+      const midLeftCell = ws.getCell(`C${rowNo}`);
+      const midRightCell = ws.getCell(`E${rowNo}`);
+      const isEvenRow = index % 2 === 0;
+
+      nameCell.value = item.name;
+      valueCell.value = item.value;
+
+      nameCell.font = {
+        name: "Trebuchet MS",
+        size: 14,
+        bold: true,
+      };
+
+      valueCell.font = {
+        name: "Trebuchet MS",
+        size: 12,
+        bold: false,
+      };
+
+      nameCell.alignment = center;
+      valueCell.alignment = center;
+
+      const rowFill = {
+        type: "pattern",
+        pattern: "solid",
+        fgColor: { argb: isEvenRow ? "FFF2F2F2" : "FFFFFFFF" },
+      };
+
+      nameCell.fill = rowFill;
+      valueCell.fill = rowFill;
+      midLeftCell.fill = rowFill;
+      midRightCell.fill = rowFill;
+
+      nameCell.border = makeBorder("thin");
+      valueCell.border = makeBorder("thin");
+      midLeftCell.border = makeBorder("thin");
+      midRightCell.border = makeBorder("thin");
+
+      ws.getRow(rowNo).height = 30;
+
+      rowNo += 1;
+    });
+  }
+
+  const firstMachine = machines[0];
+
+  const safePower = (firstMachine.powerId?.name || "")
+    .trim()
+    .replace(/\s+/g, "_")
+    .replace(/[^\w.-]/g, "");
+
+  const safeModel = (firstMachine.model || "")
+    .trim()
+    .replace(/\s+/g, "_")
+    .replace(/[^\w.-]/g, "");
+
+  const fileName = `${safePower}_${safeModel}_TEKNIK_OZELLIKLER.xlsx`;
+
+  res.setHeader(
+    "Content-Type",
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+  );
+  res.setHeader("Content-Disposition", `attachment; filename="${fileName}"`);
+
+  await workbook.xlsx.write(res);
+  res.end();
+}
+
 router.get("/", async (req, res) => {
   try {
     const { powerId, tableType, machineType, model } = req.query;
@@ -68,259 +297,30 @@ router.post("/export/excel/selected", async (req, res) => {
       return res.status(404).json({ message: "Selected machines not found" });
     }
 
-    const workbook = new ExcelJS.Workbook();
-    workbook.creator = "Laser Machine App";
-    workbook.created = new Date();
-
-    const makeBorder = (style = "thin") => ({
-      top: { style },
-      left: { style },
-      bottom: { style },
-      right: { style },
-    });
-
-    for (let index = 0; index < machines.length; index += 1) {
-      const machine = machines[index];
-
-      const safeSheetName = `${machine.model || "Machine"}_${index + 1}`
-        .replace(/[\\/*?:[\]]/g, "")
-        .slice(0, 31);
-
-      const ws = workbook.addWorksheet(safeSheetName, {
-        views: [{ showGridLines: false }],
-      });
-
-      ws.pageSetup = {
-        paperSize: 9,
-        orientation: "portrait",
-        scale: 100,
-        fitToPage: false,
-        printTitlesRow: "5:5",
-        margins: {
-          left: 0.3,
-          right: 0.3,
-          top: 0.4,
-          bottom: 0.4,
-          header: 0.2,
-          footer: 0.2,
-        },
-      };
-      ws.headerFooter = {
-        differentOddEven: false,
-        differentFirst: false,
-        oddFooter: "&LTumex Ltd. Şti.&RSayfa &P / &N",
-      };
-
-      ws.columns = [
-        { width: 4 },   // A
-        { width: 22 },  // B
-        { width: 18 },  // C
-        { width: 22 },  // D
-        { width: 24 },  // E
-        { width: 4 },   // F
-      ];
-
-      const center = { vertical: "middle", horizontal: "center", wrapText: true };
-      const left = { vertical: "middle", horizontal: "left", wrapText: true };
-
-      // Background
-      //for (let r = 1; r <= 40; r += 1) {
-      //  for (let c = 1; c <= 6; c += 1) {
-      //    ws.getCell(r, c).fill = {
-      //      type: "pattern",
-      //      pattern: "solid",
-      //      fgColor: { argb: "FFF2F2F2" },
-      //    };
-      //  }
-      //}
-
-      // Title
-      ws.mergeCells("B2:E3");
-      const titleCell = ws.getCell("B2");
-
-      const dynamicTitleParts = [
-        machine.powerId?.name || "",
-        machine.model || "",
-        "TEKNİK ÖZELLİKLER",
-      ].filter(Boolean);
-
-      titleCell.value = dynamicTitleParts.join(" ");
-
-      titleCell.font = { name: "Mulish", bold: true, size: 18 };
-      titleCell.alignment = center;
-      titleCell.border = makeBorder("medium");
-      titleCell.fill = {
-        type: "pattern",
-        pattern: "solid",
-        fgColor: { argb: "FFE7E7E7" },
-      };
-
-      // Header
-      ws.mergeCells("B5:C5");
-      ws.mergeCells("D5:E5");
-
-      const leftHeader = ws.getCell("B5");
-      leftHeader.value = "ÖZELLİKLER";
-      leftHeader.font = { 
-        name: "Verdana",
-        bold: true, 
-        size: 14 
-      };
-      leftHeader.alignment = center;
-      leftHeader.border = makeBorder("thin");
-      leftHeader.fill = {
-        type: "pattern",
-        pattern: "solid",
-        fgColor: { argb: "FFFFFFFF" },
-      };
-
-      const rightHeader = ws.getCell("D5");
-      rightHeader.value = "DEĞERLER";
-      rightHeader.font = { name: "Verdana", bold: true, size: 14 };
-      rightHeader.alignment = center;
-      rightHeader.border = makeBorder("thin");
-      rightHeader.fill = {
-        type: "pattern",
-        pattern: "solid",
-        fgColor: { argb: "FFFFFFFF" },
-      };
-
-      // Keep merged borders clean
-      ws.getCell("C5").border = makeBorder("thin");
-      ws.getCell("E5").border = makeBorder("thin");
-      ws.getRow(5).height = 35;
-      // Image area
-      ws.mergeCells("B6:E11");
-      for (let r = 6; r <= 11; r += 1) {
-        ws.getRow(r).height = 25;
-      }      
-      const imageCell = ws.getCell("B6");
-      imageCell.value = machine.model || "";
-      imageCell.font = { bold: true, size: 13 };
-      imageCell.alignment = { vertical: "top", horizontal: "center", wrapText: true };
-      imageCell.border = makeBorder("thin");
-      imageCell.fill = {
-        type: "pattern",
-        pattern: "solid",
-        fgColor: { argb: "FFFFFFFF" },
-      };
-
-      // Optional image later:
-if (machine.imagePath) {
-  const absoluteImagePath = path.join(__dirname, "..", machine.imagePath);
-
-  if (fs.existsSync(absoluteImagePath)) {
-    const extension = path.extname(absoluteImagePath).replace(".", "").toLowerCase();
-
-    if (["png", "jpg", "jpeg"].includes(extension)) {
-      const imageId = workbook.addImage({
-        filename: absoluteImagePath,
-        extension: extension === "jpg" ? "jpeg" : extension,
-      });
-
-      ws.addImage(imageId, {
-        tl: { col: 2.1, row: 6.1 },
-        ext: { width: 300, height: 150 },
-      });
-    }
-  }
-}
-
-      const rows = [
-        { name: "Güç", value: machine.powerId?.name || "" },
-        { name: "Tabla Tipi", value: machine.tableType || "" },
-        { name: "Makine Tipi", value: machine.machineType || "" },
-        { name: "Model", value: machine.model || "" },
-        ...machine.specifications.map((spec) => ({
-          name: spec.key || "",
-          value: spec.value || "",
-        })),
-      ];
-
-      let rowNo = 12;
-      rows.forEach((item, index) => {
-        ws.mergeCells(`B${rowNo}:C${rowNo}`);
-        ws.mergeCells(`D${rowNo}:E${rowNo}`);
-
-        const nameCell = ws.getCell(`B${rowNo}`);
-        const valueCell = ws.getCell(`D${rowNo}`);
-        const midLeftCell = ws.getCell(`C${rowNo}`);
-        const midRightCell = ws.getCell(`E${rowNo}`);
-
-        const isFirstDataRow = index === 0;
-        const isLastDataRow = index === rows.length - 1;
-        const isEvenRow = index % 2 === 0;
-
-        nameCell.value = item.name;
-        valueCell.value = item.value;
-
-        nameCell.font = {
-          name: "Trebuchet MS",
-          size: 14,
-          bold: true,
-        };
-
-        valueCell.font = {
-          name: "Trebuchet MS",
-          size: 12,
-          bold: false,
-        };
-
-        nameCell.alignment = center;
-        valueCell.alignment = center;
-
-        const rowFill = {
-          type: "pattern",
-          pattern: "solid",
-          fgColor: { argb: isEvenRow ? "FFF2F2F2" : "FFFFFFFF" },
-        };
-
-        nameCell.fill = rowFill;
-        valueCell.fill = rowFill;
-        midLeftCell.fill = rowFill;
-        midRightCell.fill = rowFill;
-
-        nameCell.border = makeBorder("thin");
-        valueCell.border = makeBorder("thin");
-        midLeftCell.border = makeBorder("thin");
-        midRightCell.border = makeBorder("thin");
-
-        ws.getRow(rowNo).height = 30;
-
-        rowNo += 1;
-      });
-    }
-    const firstMachine = machines[0];
-
-    const safePower = (firstMachine.powerId?.name || "")
-      .trim()
-      .replace(/\s+/g, "_")
-      .replace(/[^\w.-]/g, "");
-
-    const safeModel = (firstMachine.model || "")
-      .trim()
-      .replace(/\s+/g, "_")
-      .replace(/[^\w.-]/g, "");
-
-    const fileName = `${safePower}_${safeModel}_TEKNIK_OZELLIKLER.xlsx`;
-
-
-    res.setHeader(
-      "Content-Type",
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-    );
-    res.setHeader(
-      "Content-Disposition",
-      `attachment; filename="${fileName}"`
-    );
-
-    await workbook.xlsx.write(res);
-    res.end();
+    await exportMachinesWorkbook(res, machines);
   } catch (error) {
     res.status(500).json({
       message: "Failed to export selected machines",
       error: error.message,
     });
+  }
+});
+
+router.get("/export/excel/machine/:id", async (req, res) => {
+  try {
+    if (!isValidMachineId(req.params.id)) {
+      return res.status(400).json({ message: "Invalid machine id" });
+    }
+
+    const machine = await Machine.findById(req.params.id).populate("powerId");
+
+    if (!machine) {
+      return res.status(404).json({ message: "Machine not found" });
+    }
+
+    await exportMachinesWorkbook(res, [machine]);
+  } catch (error) {
+    res.status(500).json({ message: "Failed to export machine", error: error.message });
   }
 });
 
