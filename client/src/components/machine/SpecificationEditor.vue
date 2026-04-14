@@ -243,13 +243,15 @@ button {
   }
 
   .spec-row-actions {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    justify-content: flex-end;
     gap: 10px;
   }
 
   .spec-row-actions button {
-    height: 40px;
+    width: 40px;
+    min-width: 40px;
+    padding: 0;
     border-radius: 10px;
   }
 
@@ -270,6 +272,10 @@ button {
 
   .spec-row {
     gap: 9px;
+  }
+
+  .spec-row-actions {
+    gap: 8px;
   }
 }
 </style>
