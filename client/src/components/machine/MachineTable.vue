@@ -38,6 +38,7 @@
 
           <td class="center-cell">
             <div class="model-text">{{ machine.model }}</div>
+            <div v-if="machine.imagePath" class="model-subtext">{{ machine.imagePath }}</div>
           </td>
 
           <td class="specs-cell">
@@ -63,7 +64,7 @@
                 class="secondary small-btn"
                 @click="$emit('toggle-expanded', machine._id)"
               >
-                {{ isExpanded(machine._id) ? "Gizle" : "Detay" }}
+                {{ isExpanded(machine._id) ? "Daha Az Goster" : "Tum Ozellikleri Goster" }}
               </button>
             </div>
           </td>
@@ -113,7 +114,10 @@
 
         <tr v-if="!machines.length">
           <td colspan="7" class="empty-cell">
-            Henüz kayıtlı makine bulunmuyor.
+            <div class="empty-state">
+              <strong>Gosterilecek kayit bulunmuyor.</strong>
+              <span>Yeni bir makine ekleyin veya filtreleri temizleyerek listeyi genisletin.</span>
+            </div>
           </td>
         </tr>
       </tbody>
@@ -276,6 +280,13 @@ tbody tr:hover td {
   color: var(--text-primary);
 }
 
+.model-subtext {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+  word-break: break-word;
+}
+
 .specs-cell {
   min-width: 300px;
 }
@@ -375,11 +386,28 @@ td input[type="checkbox"]:checked::after {
 }
 
 .empty-cell {
-  text-align: center;
   padding: 28px 12px;
-  color: var(--text-muted);
   background: transparent;
   border: none;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.empty-state strong {
+  color: var(--text-primary);
+  font-size: 15px;
+}
+
+.empty-state span {
+  max-width: 420px;
+  line-height: 1.5;
 }
 
 .icon-btn {

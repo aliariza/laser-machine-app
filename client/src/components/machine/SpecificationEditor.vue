@@ -1,7 +1,12 @@
 <template>
   <div class="specs-section">
     <div class="specs-header">
-      <h3 class="subsection-title">Teknik Özellikler</h3>
+      <div>
+        <h3 class="subsection-title">Teknik Özellikler</h3>
+        <p class="subsection-copy">
+          Her satira ozellik ve karsiligindaki degeri ekleyin.
+        </p>
+      </div>
     </div>
 
     <div
@@ -134,6 +139,13 @@ function removeSpecification(index) {
   font-size: 17px;
   font-weight: 700;
   color: var(--text-primary);
+}
+
+.subsection-copy {
+  margin: 6px 0 0;
+  color: var(--text-muted);
+  font-size: 12.5px;
+  line-height: 1.45;
 }
 
 .spec-row {

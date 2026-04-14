@@ -1,7 +1,12 @@
 <template>
   <div class="form-card">
     <div class="card-header">
-      <h2 class="section-title">Teknik Veri Girişi</h2>
+      <div>
+        <h2 class="section-title">Teknik Veri Girişi</h2>
+        <p class="section-copy">
+          Yeni makine oluşturun, mevcut kayıtları düzenleyin ve Excel akışlarını yönetin.
+        </p>
+      </div>
     </div>
 
     <form class="machine-form" @submit.prevent="$emit('save')">
@@ -80,6 +85,7 @@
             placeholder="uploads/fs3015.png"
             @input="updateField('imagePath', $event.target.value)"
           />
+          <small class="field-hint">Opsiyonel. Yalnızca görsel dosya yolunuz varsa doldurun.</small>
         </div>
       </div>
 
@@ -89,58 +95,62 @@
       />
 
       <div class="actions">
-        <button
-          type="submit"
-          class="primary form-icon-btn"
-          :title="editingMachineId ? 'Güncelle' : 'Kaydet'"
-          :disabled="isSaving"
-        >
-          <Save :size="16" />
-           <span>{{ isSaving ? "Kaydediliyor..." : editingMachineId ? "Güncelle" : "Kaydet" }}</span>
-        </button>
+        <div class="action-group action-group-primary">
+          <button
+            type="submit"
+            class="primary form-icon-btn"
+            :title="editingMachineId ? 'Kaydı Güncelle' : 'Kaydı Kaydet'"
+            :disabled="isSaving"
+          >
+            <Save :size="16" />
+            <span>{{ isSaving ? "Kaydediliyor..." : editingMachineId ? "Kaydı Güncelle" : "Kaydı Kaydet" }}</span>
+          </button>
 
-        <button
-          type="button"
-          class="secondary form-icon-btn"
-          @click="$emit('reset')"
-          title="Temizle"
-          :disabled="isSaving"
-        >
-          <RotateCcw :size="16" />
-          <span>Temizle</span>
-        </button>
+          <button
+            type="button"
+            class="secondary form-icon-btn"
+            @click="$emit('reset')"
+            title="Formu Temizle"
+            :disabled="isSaving"
+          >
+            <RotateCcw :size="16" />
+            <span>Formu Temizle</span>
+          </button>
+        </div>
 
-        <button
-          type="button"
-          class="secondary form-icon-btn"
-          @click="$emit('export-all')"
-          title="Tümünü Excel'e Aktar"
-          :disabled="isExporting"
-        >
-          <FileSpreadsheet :size="16" />
-          <span>{{ isExporting ? "Aktarılıyor..." : "Tümünü Excel'e Aktar" }}</span>
-        </button>
+        <div class="action-group">
+          <button
+            type="button"
+            class="secondary form-icon-btn"
+            @click="$emit('export-all')"
+            title="Tüm Listeyi Excel'e Aktar"
+            :disabled="isExporting"
+          >
+            <FileSpreadsheet :size="16" />
+            <span>{{ isExporting ? "Aktarılıyor..." : "Tüm Listeyi Aktar" }}</span>
+          </button>
 
-        <button
-          type="button"
-          class="secondary form-icon-btn"
-          @click="$emit('export-selected')"
-          title="Seçilenleri Excel'e Aktar"
-          :disabled="isExporting"
-        >
-          <Download :size="16" />
-          <span>{{ isExporting ? "Aktarılıyor..." : "Seçilenleri Excel'e Aktar" }}</span>
-        </button>
+          <button
+            type="button"
+            class="secondary form-icon-btn"
+            @click="$emit('export-selected')"
+            title="Seçili Kayıtları Excel'e Aktar"
+            :disabled="isExporting"
+          >
+            <Download :size="16" />
+            <span>{{ isExporting ? "Aktarılıyor..." : "Seçili Kayıtları Aktar" }}</span>
+          </button>
 
-        <label
-          class="upload-button secondary form-icon-btn"
-          title="Excel'den İçe Aktar"
-          :class="{ disabled: isImporting}"
-        >
-          <Upload :size="16" />
-          <span>{{ isImporting ? "İçe Aktarılıyor..." : "Excel'den İçe Aktar" }}</span>
-          <input type="file" accept=".xlsx" @change="$emit('import', $event)" hidden :disabled="isImporting"/>
-        </label>
+          <label
+            class="upload-button secondary form-icon-btn"
+            title="Excel'den Toplu İçe Aktar"
+            :class="{ disabled: isImporting }"
+          >
+            <Upload :size="16" />
+            <span>{{ isImporting ? "İçe Aktarılıyor..." : "Excel'den İçe Aktar" }}</span>
+            <input type="file" accept=".xlsx" @change="$emit('import', $event)" hidden :disabled="isImporting" />
+          </label>
+        </div>
       </div>
     </form>
   </div>
@@ -234,6 +244,13 @@ function updateSpecifications(specifications) {
   color: var(--text-primary);
 }
 
+.section-copy {
+  margin: 8px 0 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
 .machine-form {
   display: flex;
   flex-direction: column;
@@ -260,6 +277,13 @@ label {
   font-size: 14px;
   font-weight: 600;
   color: var(--text-secondary);
+}
+
+.field-hint {
+  margin-top: -2px;
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.45;
 }
 
 .inline-row {
@@ -371,10 +395,21 @@ button:disabled,
 
 .actions {
   display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 4px;
+}
+
+.action-group {
+  display: flex;
   flex-wrap: wrap;
   gap: 12px;
   align-items: center;
-  padding-top: 4px;
+}
+
+.action-group-primary {
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-soft);
 }
 
 @media (max-width: 1100px) {
@@ -401,6 +436,17 @@ button:disabled,
 
   .section-title {
     font-size: 18px;
+  }
+
+  .action-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions .form-icon-btn,
+  .upload-button {
+    width: 100%;
+    justify-content: center;
   }
 }
 </style>

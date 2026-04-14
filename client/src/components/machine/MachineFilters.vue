@@ -5,7 +5,7 @@
         <input
           :value="modelSearch"
           type="text"
-          placeholder="Model ara..."
+          placeholder="Model veya anahtar kelime ara..."
           @input="emit('update:modelSearch', $event.target.value)"
         />
       </div>
@@ -46,6 +46,9 @@
       </div>
       <div class="summary-pill">
         Filtrelenen: <strong>{{ filteredCount }}</strong>
+      </div>
+      <div class="summary-note">
+        Sonucu daraltmak için model, güç veya makine tipi seçin.
       </div>
     </div>
   </div>
@@ -143,6 +146,7 @@ const emit = defineEmits([
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 14px;
+  align-items: center;
 }
 
 .summary-pill {
@@ -161,6 +165,12 @@ const emit = defineEmits([
 .summary-pill strong {
   color: var(--text-primary);
   font-weight: 700;
+}
+
+.summary-note {
+  color: var(--text-muted);
+  font-size: 12.5px;
+  font-weight: 600;
 }
 
 .secondary {

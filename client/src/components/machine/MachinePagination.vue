@@ -18,7 +18,7 @@
       </label>
 
       <div class="range-text">
-        {{ pageStart }}-{{ pageEnd }} / {{ filteredCount }} kayıt
+        {{ pageStart }}-{{ pageEnd }} arasi, toplam {{ filteredCount }} kayit
       </div>
     </div>
 

@@ -70,45 +70,49 @@
                   Kayıtları filtreleyin, düzenleyin ve teknik çıktıları alın.
                 </p>
               </div>
+              <div class="list-card-chip">
+                <span>Aktif gorunum</span>
+                <strong>{{ filteredMachineCount }}</strong>
+              </div>
             </div>
             <MachineFilters
-            :powers="powers"
-            :model-search="modelSearch"
-            :power-filter="powerFilter"
-            :machine-type-filter="machineTypeFilter"
-            :total-count="totalMachineCount"
-            :filtered-count="filteredMachineCount"
-            @update:modelSearch="modelSearch = $event"
-            @update:powerFilter="powerFilter = $event"
-            @update:machineTypeFilter="machineTypeFilter = $event"
-            @clear="clearFilters"
+              :powers="powers"
+              :model-search="modelSearch"
+              :power-filter="powerFilter"
+              :machine-type-filter="machineTypeFilter"
+              :total-count="totalMachineCount"
+              :filtered-count="filteredMachineCount"
+              @update:modelSearch="modelSearch = $event"
+              @update:powerFilter="powerFilter = $event"
+              @update:machineTypeFilter="machineTypeFilter = $event"
+              @clear="clearFilters"
             />
             <MachineTable
-            :machines="paginatedMachines"
-            :selected-machine-ids="selectedMachineIds"
-            :expanded-machine-ids="expandedMachineIds"
-            :is-exporting="isExporting"
-            :is-deleting="isDeleting"
-            @update:selectedMachineIds="selectedMachineIds = $event"
-            @toggle-expanded="toggleExpanded"
-            @edit="editMachine"
-            @copy="copyMachine"
-            @export-single="exportSingleMachine"
-            @delete="deleteMachine"
+              :machines="paginatedMachines"
+              :selected-machine-ids="selectedMachineIds"
+              :expanded-machine-ids="expandedMachineIds"
+              :is-exporting="isExporting"
+              :is-deleting="isDeleting"
+              @update:selectedMachineIds="selectedMachineIds = $event"
+              @toggle-expanded="toggleExpanded"
+              @edit="editMachine"
+              @copy="copyMachine"
+              @export-single="exportSingleMachine"
+              @delete="deleteMachine"
             />
             <MachinePagination
-            :filtered-count="filteredMachineCount"
-            :current-page="currentPage"
-            :page-size="pageSize"
-            :page-size-options="pageSizeOptions"
-            :total-pages="totalPages"
-            :page-start="pageStart"
-            :page-end="pageEnd"
-            :visible-page-numbers="visiblePageNumbers"
-            @update:pageSize="setPageSize"
-            @go-to-page="goToPage"
-            @previous-page="goToPreviousPage"
-            @next-page="goToNextPage"
+              :filtered-count="filteredMachineCount"
+              :current-page="currentPage"
+              :page-size="pageSize"
+              :page-size-options="pageSizeOptions"
+              :total-pages="totalPages"
+              :page-start="pageStart"
+              :page-end="pageEnd"
+              :visible-page-numbers="visiblePageNumbers"
+              @update:pageSize="setPageSize"
+              @go-to-page="goToPage"
+              @previous-page="goToPreviousPage"
+              @next-page="goToNextPage"
             />
           </div>
         </div>
@@ -256,6 +260,30 @@ onMounted(async () => {
   gap: 12px;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+.list-card-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--bg-accent-soft);
+  border: 1px solid var(--border-accent);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.list-card-chip span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.list-card-chip strong {
+  font-size: 16px;
+  color: var(--text-primary);
 }
 
 .header-pill {
