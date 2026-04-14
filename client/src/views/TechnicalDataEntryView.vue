@@ -17,7 +17,8 @@
             :aria-label="theme === 'dark' ? 'Açık moda geç' : 'Koyu moda geç'"
             :title="theme === 'dark' ? 'Açık mod' : 'Koyu mod'"
           >
-            <span class="theme-toggle-label">{{ theme === "dark" ? "Açık Mod" : "Koyu Mod" }}</span>
+            <Sun v-if="theme === 'dark'" :size="18" />
+            <Moon v-else :size="18" />
           </button>
           <div class="page-stats">
             <div class="header-pill">
@@ -142,6 +143,7 @@
 </template>
 
 <script setup>
+import { Moon, Sun } from "lucide-vue-next";
 import { onMounted, ref } from "vue";
 import MachineFilters from "../components/machine/MachineFilters.vue";
 import MachinePagination from "../components/machine/MachinePagination.vue";
@@ -297,8 +299,9 @@ onMounted(async () => {
 }
 
 .theme-toggle {
+  width: 42px;
   min-height: 42px;
-  padding: 0 16px;
+  padding: 0;
   border-radius: 999px;
   border: 1px solid var(--border-accent);
   background: var(--bg-glass);
@@ -312,11 +315,8 @@ onMounted(async () => {
   background: var(--bg-hover);
 }
 
-.theme-toggle-label {
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.theme-toggle :deep(svg) {
+  stroke-width: 2.1;
 }
 
 .list-card-chip {
