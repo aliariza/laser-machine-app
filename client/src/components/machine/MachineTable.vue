@@ -421,9 +421,15 @@ td input[type="checkbox"]:checked::after {
   height: 34px;
   padding: 0;
   border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
 .icon-btn svg {
+  display: block;
+  flex: 0 0 auto;
   stroke-width: 2;
 }
 

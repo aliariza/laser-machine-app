@@ -300,6 +300,7 @@ onMounted(async () => {
 
 .theme-toggle {
   width: 42px;
+  height: 42px;
   min-height: 42px;
   padding: 0;
   border-radius: 999px;
@@ -307,6 +308,10 @@ onMounted(async () => {
   background: var(--bg-glass);
   color: var(--text-primary);
   box-shadow: var(--shadow-soft);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
   cursor: pointer;
   transition: all 0.18s ease;
 }
@@ -316,6 +321,8 @@ onMounted(async () => {
 }
 
 .theme-toggle :deep(svg) {
+  display: block;
+  flex: 0 0 auto;
   stroke-width: 2.1;
 }
 
