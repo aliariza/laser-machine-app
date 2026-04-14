@@ -9,10 +9,10 @@ import {
   createMachineRequest,
   deleteMachineRequest,
   exportAllMachinesRequest,
-  exportSelectedMachinesRequest,
   fetchMachinesRequest,
   getAllMachinesExcelExportUrl,
   getMachineExcelExportUrl,
+  getSelectedMachinesExcelExportUrl,
   importMachinesExcelRequest,
   updateMachineRequest,
 } from "../services/machineService";
@@ -394,15 +394,9 @@ async function exportSelectedExcel() {
   isExporting.value = true;
 
   try {
-    const blobData = await exportSelectedMachinesRequest(
-      selectedMachineIds.value
+    downloadExcelFromUrl(
+      getSelectedMachinesExcelExportUrl(selectedMachineIds.value)
     );
-
-    const selectedMachine = machines.value.find(
-      (m) => m._id === selectedMachineIds.value[0]
-    );
-
-    downloadExcelBlob(blobData, buildExportFileName(selectedMachine));
     notify("Seçilen makineler Excel'e aktarıldı", "success");
   } catch (error) {
     notify("Seçilen makineler Excel'e aktarılamadı", "error");

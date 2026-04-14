@@ -306,6 +306,39 @@ router.post("/export/excel/selected", async (req, res) => {
   }
 });
 
+router.get("/export/excel/selected", async (req, res) => {
+  try {
+    const machineIds = String(req.query.machineIds || "")
+      .split(",")
+      .map((id) => id.trim())
+      .filter(Boolean);
+
+    if (!machineIds.length) {
+      return res.status(400).json({ message: "No machines selected" });
+    }
+
+    const invalidMachineId = machineIds.find((id) => !isValidMachineId(id));
+    if (invalidMachineId) {
+      return res.status(400).json({ message: "Invalid machine id in selection" });
+    }
+
+    const machines = await Machine.find({ _id: { $in: machineIds } })
+      .populate("powerId")
+      .sort({ createdAt: -1 });
+
+    if (!machines.length) {
+      return res.status(404).json({ message: "Selected machines not found" });
+    }
+
+    await exportMachinesWorkbook(res, machines);
+  } catch (error) {
+    res.status(500).json({
+      message: "Failed to export selected machines",
+      error: error.message,
+    });
+  }
+});
+
 router.get("/export/excel/machine/:id", async (req, res) => {
   try {
     if (!isValidMachineId(req.params.id)) {

@@ -29,6 +29,14 @@ export async function exportSelectedMachinesRequest(machineIds) {
   return response.data;
 }
 
+export function getSelectedMachinesExcelExportUrl(machineIds) {
+  const query = new URLSearchParams({
+    machineIds: machineIds.join(","),
+  });
+
+  return `${api.defaults.baseURL}/machines/export/excel/selected?${query.toString()}`;
+}
+
 export function getMachineExcelExportUrl(machineId) {
   return `${api.defaults.baseURL}/machines/export/excel/machine/${machineId}`;
 }
