@@ -71,7 +71,7 @@
                 </p>
               </div>
               <div class="list-card-chip">
-                <span>Aktif gorunum</span>
+                <span>Aktif görünüm</span>
                 <strong>{{ filteredMachineCount }}</strong>
               </div>
             </div>

@@ -4,7 +4,7 @@
       <div>
         <h3 class="subsection-title">Teknik Özellikler</h3>
         <p class="subsection-copy">
-          Her satira ozellik ve karsiligindaki degeri ekleyin.
+          Her satıra özellik ve karşılığındaki değeri ekleyin.
         </p>
       </div>
     </div>

@@ -63,8 +63,9 @@
                 type="button"
                 class="secondary small-btn"
                 @click="$emit('toggle-expanded', machine._id)"
+                :aria-label="isExpanded(machine._id) ? 'Daha az göster' : 'Tüm özellikleri göster'"
               >
-                {{ isExpanded(machine._id) ? "Daha Az Goster" : "Tum Ozellikleri Goster" }}
+                {{ isExpanded(machine._id) ? "Daha Az Göster" : "Tüm Özellikleri Göster" }}
               </button>
             </div>
           </td>
@@ -76,6 +77,7 @@
                 class="secondary icon-btn"
                 @click="$emit('edit', machine)"
                 title="Düzenle"
+                aria-label="Kaydı düzenle"
               >
                 <Pencil :size="15" />
               </button>
@@ -85,6 +87,7 @@
                 class="secondary icon-btn"
                 @click="$emit('copy', machine)"
                 title="Kopyala"
+                aria-label="Kaydı kopyala"
               >
                 <Copy :size="15" />
               </button>
@@ -95,6 +98,7 @@
                 @click="$emit('export-single', machine)"
                 title="Excel'e Aktar"
                 :disabled="isExporting"
+                aria-label="Kaydı Excel'e aktar"
               >
                 <FileSpreadsheet :size="15" />
               </button>
@@ -105,6 +109,7 @@
                 @click="$emit('delete', machine._id)"
                 title="Sil"
                 :disabled="isDeleting"
+                aria-label="Kaydı sil"
               >
                 <Trash2 :size="15" />
               </button>
@@ -115,8 +120,8 @@
         <tr v-if="!machines.length">
           <td colspan="7" class="empty-cell">
             <div class="empty-state">
-              <strong>Gosterilecek kayit bulunmuyor.</strong>
-              <span>Yeni bir makine ekleyin veya filtreleri temizleyerek listeyi genisletin.</span>
+              <strong>Gösterilecek kayıt bulunmuyor.</strong>
+              <span>Yeni bir makine ekleyin veya filtreleri temizleyerek listeyi genişletin.</span>
             </div>
           </td>
         </tr>
