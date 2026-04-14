@@ -35,6 +35,7 @@
           class="secondary form-icon-btn"
           @click="addSpecificationAfter(index)"
           title="Alt satır ekle"
+          aria-label="Alt satır ekle"
         >
           <Plus :size="16" />
         </button>
@@ -44,6 +45,7 @@
           class="danger form-icon-btn"
           @click="removeSpecification(index)"
           title="Sil"
+          aria-label="Satırı sil"
         >
           <Trash2 :size="16" />
         </button>

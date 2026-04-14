@@ -26,7 +26,7 @@
       </div>
       <div v-if="!isBackendConnected" class="status-banner">
         <div>
-          <h2 class="status-banner-title">Backend not connected yet</h2>
+          <h2 class="status-banner-title">Sunucuya bağlanılamadı</h2>
           <p class="status-banner-text">
             {{ backendMessage }}
           </p>
@@ -37,7 +37,7 @@
           @click="loadInitialData"
           :disabled="isLoadingInitialData"
         >
-          {{ isLoadingInitialData ? "Checking..." : "Try Again" }}
+          {{ isLoadingInitialData ? "Kontrol ediliyor..." : "Tekrar Dene" }}
         </button>
       </div>
       <div class="content-grid">
