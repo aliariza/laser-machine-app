@@ -99,11 +99,11 @@
           <button
             type="submit"
             class="primary form-icon-btn"
-            :title="editingMachineId ? 'Kaydı Güncelle' : 'Kaydı Kaydet'"
+            :title="editingMachineId ? 'Güncelle' : 'Kaydet'"
             :disabled="isSaving"
           >
             <Save :size="16" />
-            <span>{{ isSaving ? "Kaydediliyor..." : editingMachineId ? "Kaydı Güncelle" : "Kaydı Kaydet" }}</span>
+            <span>{{ isSaving ? "Kaydediliyor..." : editingMachineId ? "Güncelle" : "Kaydet" }}</span>
           </button>
 
           <button
