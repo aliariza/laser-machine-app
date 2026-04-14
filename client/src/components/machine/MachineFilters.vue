@@ -110,7 +110,7 @@ const emit = defineEmits([
   padding: 0 14px;
   border-radius: 12px;
   border: 1px solid var(--border-soft);
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--bg-input-soft);
   color: var(--text-primary);
   font-size: 13px;
   transition: all 0.18s ease;
@@ -182,7 +182,7 @@ const emit = defineEmits([
 }
 
 .secondary:hover {
-  background: #edf3ef;
+  background: var(--bg-hover);
 }
 
 @media (max-width: 1100px) {

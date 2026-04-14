@@ -9,18 +9,29 @@
             Makine kayıtları, teknik özellikler ve Excel çıktıları
           </p>
         </div>
-        <div class="page-stats">
-          <div class="header-pill">
-            <span>Kayıt</span>
-            <strong>{{ totalMachineCount }}</strong>
-          </div>
-          <div class="header-pill">
-            <span>Filtre</span>
-            <strong>{{ filteredMachineCount }}</strong>
-          </div>
-          <div class="header-pill">
-            <span>Güç</span>
-            <strong>{{ powers.length }}</strong>
+        <div class="page-meta">
+          <button
+            type="button"
+            class="theme-toggle"
+            @click="toggleTheme"
+            :aria-label="theme === 'dark' ? 'Açık moda geç' : 'Koyu moda geç'"
+            :title="theme === 'dark' ? 'Açık mod' : 'Koyu mod'"
+          >
+            <span class="theme-toggle-label">{{ theme === "dark" ? "Açık Mod" : "Koyu Mod" }}</span>
+          </button>
+          <div class="page-stats">
+            <div class="header-pill">
+              <span>Kayıt</span>
+              <strong>{{ totalMachineCount }}</strong>
+            </div>
+            <div class="header-pill">
+              <span>Filtre</span>
+              <strong>{{ filteredMachineCount }}</strong>
+            </div>
+            <div class="header-pill">
+              <span>Güç</span>
+              <strong>{{ powers.length }}</strong>
+            </div>
           </div>
         </div>
       </div>
@@ -131,7 +142,7 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import MachineFilters from "../components/machine/MachineFilters.vue";
 import MachinePagination from "../components/machine/MachinePagination.vue";
 import MachineTable from "../components/machine/MachineTable.vue";
@@ -195,7 +206,23 @@ const {
   isBackendConnected,
   backendMessage,
 } = useMachinePage(showToast);
+
+const theme = ref("light");
+
+function applyTheme(nextTheme) {
+  theme.value = nextTheme;
+  document.documentElement.dataset.theme = nextTheme;
+  window.localStorage.setItem("laser-theme", nextTheme);
+}
+
+function toggleTheme() {
+  applyTheme(theme.value === "dark" ? "light" : "dark");
+}
+
 onMounted(async () => {
+  const savedTheme = window.localStorage.getItem("laser-theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  applyTheme(savedTheme || (prefersDark ? "dark" : "light"));
   await loadInitialData();
 });
 </script>
@@ -231,8 +258,8 @@ onMounted(async () => {
   margin-bottom: 14px;
   border-radius: 999px;
   border: 1px solid var(--border-accent);
-  background: rgba(255, 255, 255, 0.72);
-  color: var(--accent);
+  background: var(--bg-glass-soft);
+  color: var(--accent-pill-text);
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -260,6 +287,36 @@ onMounted(async () => {
   gap: 12px;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+.page-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.theme-toggle {
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border-accent);
+  background: var(--bg-glass);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--bg-hover);
+}
+
+.theme-toggle-label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .list-card-chip {
@@ -290,7 +347,7 @@ onMounted(async () => {
   min-width: 108px;
   padding: 16px 18px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.78);
+  background: var(--bg-glass);
   border: 1px solid var(--border-soft);
   box-shadow: var(--shadow-soft);
   backdrop-filter: blur(12px);
@@ -345,9 +402,9 @@ onMounted(async () => {
   margin-bottom: 24px;
   padding: 18px 20px;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(200, 77, 59, 0.18);
-  background: linear-gradient(135deg, #fff8ef 0%, #fff3e8 100%);
-  color: #9a3412;
+  border: 1px solid var(--danger-warm-border);
+  background: var(--danger-warm-bg);
+  color: var(--danger-warm-text);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -359,7 +416,7 @@ onMounted(async () => {
   margin: 0 0 6px;
   font-size: 18px;
   font-weight: 700;
-  color: #9a3412;
+  color: var(--danger-warm-text);
 }
 
 .status-banner-text {
@@ -367,15 +424,15 @@ onMounted(async () => {
   max-width: 760px;
   font-size: 14px;
   line-height: 1.5;
-  color: #9a3412;
+  color: var(--danger-warm-text);
 }
 
 .status-banner-action {
   height: 42px;
-  border: 1px solid rgba(200, 77, 59, 0.18);
+  border: 1px solid var(--danger-warm-border);
   border-radius: 12px;
-  background: #ffffff;
-  color: #9a3412;
+  background: var(--danger-soft-button);
+  color: var(--danger-warm-text);
   font: inherit;
   font-size: 13px;
   font-weight: 700;
@@ -429,6 +486,11 @@ onMounted(async () => {
   .page-stats {
     justify-content: flex-start;
   }
+
+  .page-meta {
+    width: 100%;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 700px) {
@@ -465,6 +527,11 @@ onMounted(async () => {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .theme-toggle {
+    width: 100%;
+    justify-content: center;
   }
 
   .header-pill {

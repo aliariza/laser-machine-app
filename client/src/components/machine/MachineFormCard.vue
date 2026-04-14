@@ -306,7 +306,7 @@ select {
   padding: 0 14px;
   border-radius: 12px;
   border: 1px solid var(--border-soft);
-  background: rgba(255, 255, 255, 0.86);
+  background: var(--bg-input);
   color: var(--text-primary);
   font-size: 14px;
   transition: all 0.18s ease;
@@ -379,7 +379,7 @@ button:disabled,
 }
 
 .secondary:hover {
-  background: #edf3ef;
+  background: var(--bg-hover);
 }
 
 .danger {

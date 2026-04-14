@@ -132,7 +132,7 @@ const emit = defineEmits([
   padding: 0 12px;
   border-radius: 10px;
   border: 1px solid var(--border-soft);
-  background: rgba(255, 255, 255, 0.86);
+  background: var(--bg-input);
   color: var(--text-primary);
   font: inherit;
 }
@@ -157,7 +157,7 @@ const emit = defineEmits([
   padding: 0 14px;
   border-radius: 10px;
   border: 1px solid var(--border-soft);
-  background: rgba(255, 255, 255, 0.86);
+  background: var(--bg-input);
   color: var(--text-secondary);
   font: inherit;
   font-size: 13px;
@@ -167,7 +167,7 @@ const emit = defineEmits([
 }
 
 .pager-btn:hover:not(:disabled) {
-  background: #edf3ef;
+  background: var(--bg-hover);
 }
 
 .pager-btn.active {

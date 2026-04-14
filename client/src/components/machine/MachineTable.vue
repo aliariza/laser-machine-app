@@ -228,7 +228,7 @@ tbody td {
   padding: 12px 12px;
   border-top: 1px solid var(--border-soft);
   border-bottom: 1px solid var(--border-soft);
-  background: rgba(255, 255, 255, 0.74);
+  background: var(--bg-table-row);
   vertical-align: top;
   color: var(--text-secondary);
 }
@@ -244,7 +244,7 @@ tbody td:last-child {
 }
 
 tbody tr:hover td {
-  background: rgba(245, 249, 246, 0.98);
+  background: var(--bg-table-row-hover);
 }
 
 .center-cell {
@@ -265,18 +265,18 @@ tbody tr:hover td {
 }
 
 .badge-power {
-  background: #dff1e8;
-  color: var(--accent-strong);
+  background: var(--badge-power-bg);
+  color: var(--badge-power-text);
 }
 
 .badge-table {
-  background: #edf5e3;
-  color: #4a6a20;
+  background: var(--badge-table-bg);
+  color: var(--badge-table-text);
 }
 
 .badge-machine {
-  background: #fff0e3;
-  color: #a95522;
+  background: var(--badge-machine-bg);
+  color: var(--badge-machine-text);
 }
 
 .model-text {
@@ -365,7 +365,7 @@ td input[type="checkbox"] {
   padding: 0;
   border: 1.5px solid rgba(20, 40, 31, 0.2);
   border-radius: 3px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--bg-checkbox);
   box-sizing: border-box;
   display: block;
   position: relative;
@@ -385,7 +385,7 @@ td input[type="checkbox"]:checked::after {
   top: 1px;
   width: 4px;
   height: 8px;
-  border: solid #ffffff;
+  border: solid var(--checkbox-check);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
@@ -434,7 +434,7 @@ td input[type="checkbox"]:checked::after {
 }
 
 .secondary:hover {
-  background: #edf3ef;
+  background: var(--bg-hover);
 }
 
 .danger {
