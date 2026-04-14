@@ -18,6 +18,7 @@
   --bg-table-row-hover: rgba(245, 249, 246, 0.98);
   --bg-checkbox: rgba(255, 255, 255, 0.9);
   --checkbox-check: #ffffff;
+  --checkbox-border: rgba(20, 40, 31, 0.2);
 
   --text-primary: #14281f;
   --text-secondary: #52645c;
@@ -74,6 +75,7 @@
   --bg-table-row-hover: rgba(31, 43, 39, 0.96);
   --bg-checkbox: rgba(18, 26, 24, 0.95);
   --checkbox-check: #eaf5f1;
+  --checkbox-border: rgba(193, 221, 209, 0.28);
 
   --text-primary: #e6f1ec;
   --text-secondary: #afc3ba;
@@ -93,17 +95,17 @@
   --danger: #d86857;
   --danger-strong: #ea806d;
   --danger-soft: rgba(216, 104, 87, 0.2);
-  --danger-warm-bg: linear-gradient(135deg, rgba(77, 39, 30, 0.88) 0%, rgba(59, 30, 24, 0.95) 100%);
-  --danger-warm-text: #ffd6ca;
-  --danger-warm-border: rgba(216, 104, 87, 0.24);
-  --danger-soft-button: rgba(30, 20, 18, 0.9);
+  --danger-warm-bg: linear-gradient(135deg, rgba(86, 44, 35, 0.72) 0%, rgba(67, 34, 28, 0.82) 100%);
+  --danger-warm-text: #ffd9cf;
+  --danger-warm-border: rgba(233, 133, 112, 0.28);
+  --danger-soft-button: rgba(47, 27, 23, 0.88);
 
-  --badge-power-bg: rgba(68, 130, 105, 0.28);
-  --badge-power-text: #9dd6bc;
-  --badge-table-bg: rgba(112, 135, 66, 0.26);
-  --badge-table-text: #cad9a1;
-  --badge-machine-bg: rgba(158, 101, 54, 0.26);
-  --badge-machine-text: #f4c79b;
+  --badge-power-bg: rgba(64, 146, 113, 0.34);
+  --badge-power-text: #b5ecd3;
+  --badge-table-bg: rgba(129, 148, 72, 0.3);
+  --badge-table-text: #dbe8b1;
+  --badge-machine-bg: rgba(176, 112, 60, 0.3);
+  --badge-machine-text: #ffd4aa;
 
   --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.34);
   --shadow-card: 0 18px 46px rgba(0, 0, 0, 0.28);

@@ -363,7 +363,7 @@ td input[type="checkbox"] {
   height: 18px;
   margin: 0 auto;
   padding: 0;
-  border: 1.5px solid rgba(20, 40, 31, 0.2);
+  border: 1.5px solid var(--checkbox-border);
   border-radius: 3px;
   background-color: var(--bg-checkbox);
   box-sizing: border-box;
