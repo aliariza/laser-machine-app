@@ -74,59 +74,40 @@
           />
         </div>
         <div class="panel-column">
-          <div class="list-card">
-            <div class="card-header">
-              <div>
-                <h2 class="section-title">Makine Listesi</h2>
-                <p class="section-subtitle">
-                  Kayıtları filtreleyin, düzenleyin ve teknik çıktıları alın.
-                </p>
-              </div>
-              <div class="list-card-chip">
-                <span>Aktif görünüm</span>
-                <strong>{{ filteredMachineCount }}</strong>
-              </div>
-            </div>
-            <MachineFilters
-              :powers="powers"
-              :model-search="modelSearch"
-              :power-filter="powerFilter"
-              :machine-type-filter="machineTypeFilter"
-              :total-count="totalMachineCount"
-              :filtered-count="filteredMachineCount"
-              @update:modelSearch="modelSearch = $event"
-              @update:powerFilter="powerFilter = $event"
-              @update:machineTypeFilter="machineTypeFilter = $event"
-              @clear="clearFilters"
-            />
-            <MachineTable
-              :machines="paginatedMachines"
-              :selected-machine-ids="selectedMachineIds"
-              :expanded-machine-ids="expandedMachineIds"
-              :is-exporting="isExporting"
-              :is-deleting="isDeleting"
-              @update:selectedMachineIds="selectedMachineIds = $event"
-              @toggle-expanded="toggleExpanded"
-              @edit="editMachine"
-              @copy="copyMachine"
-              @export-single="exportSingleMachine"
-              @delete="deleteMachine"
-            />
-            <MachinePagination
-              :filtered-count="filteredMachineCount"
-              :current-page="currentPage"
-              :page-size="pageSize"
-              :page-size-options="pageSizeOptions"
-              :total-pages="totalPages"
-              :page-start="pageStart"
-              :page-end="pageEnd"
-              :visible-page-numbers="visiblePageNumbers"
-              @update:pageSize="setPageSize"
-              @go-to-page="goToPage"
-              @previous-page="goToPreviousPage"
-              @next-page="goToNextPage"
-            />
-          </div>
+          <MachineListCard
+            :powers="powers"
+            :model-search="modelSearch"
+            :power-filter="powerFilter"
+            :machine-type-filter="machineTypeFilter"
+            :total-count="totalMachineCount"
+            :filtered-count="filteredMachineCount"
+            :machines="paginatedMachines"
+            :selected-machine-ids="selectedMachineIds"
+            :expanded-machine-ids="expandedMachineIds"
+            :is-exporting="isExporting"
+            :is-deleting="isDeleting"
+            :current-page="currentPage"
+            :page-size="pageSize"
+            :page-size-options="pageSizeOptions"
+            :total-pages="totalPages"
+            :page-start="pageStart"
+            :page-end="pageEnd"
+            :visible-page-numbers="visiblePageNumbers"
+            @update:modelSearch="modelSearch = $event"
+            @update:powerFilter="powerFilter = $event"
+            @update:machineTypeFilter="machineTypeFilter = $event"
+            @clear="clearFilters"
+            @update:selectedMachineIds="selectedMachineIds = $event"
+            @toggle-expanded="toggleExpanded"
+            @edit="editMachine"
+            @copy="copyMachine"
+            @export-single="exportSingleMachine"
+            @delete="deleteMachine"
+            @update:pageSize="setPageSize"
+            @go-to-page="goToPage"
+            @previous-page="goToPreviousPage"
+            @next-page="goToNextPage"
+          />
         </div>
       </div>
       <div class="page-credit">
@@ -154,10 +135,8 @@
 <script setup>
 import { Moon, Sun } from "lucide-vue-next";
 import { onMounted } from "vue";
-import MachineFilters from "../components/machine/MachineFilters.vue";
-import MachinePagination from "../components/machine/MachinePagination.vue";
-import MachineTable from "../components/machine/MachineTable.vue";
 import MachineFormCard from "../components/machine/MachineFormCard.vue";
+import MachineListCard from "../components/machine/MachineListCard.vue";
 import ConfirmDialog from "../components/ui/ConfirmDialog.vue";
 import { useTheme } from "../composables/useTheme";
 import ToastMessage from "../components/ui/ToastMessage.vue";
@@ -329,30 +308,6 @@ onMounted(async () => {
   stroke-width: 2.1;
 }
 
-.list-card-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: var(--bg-accent-soft);
-  border: 1px solid var(--border-accent);
-  color: var(--text-secondary);
-  white-space: nowrap;
-}
-
-.list-card-chip span {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.list-card-chip strong {
-  font-size: 16px;
-  color: var(--text-primary);
-}
-
 .header-pill {
   min-width: 108px;
   padding: 16px 18px;
@@ -389,23 +344,6 @@ onMounted(async () => {
 
 .panel-column {
   min-width: 0;
-}
-
-.list-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-card);
-  backdrop-filter: blur(16px);
-  padding: 26px;
-}
-
-.card-header {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 18px;
 }
 
 .status-banner {
@@ -454,19 +392,6 @@ onMounted(async () => {
 .status-banner-action:disabled {
   opacity: 0.65;
   cursor: not-allowed;
-}
-
-.section-title {
-  margin: 0 0 6px;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.section-subtitle {
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--text-secondary);
 }
 
 .page-credit {
@@ -520,11 +445,6 @@ onMounted(async () => {
     font-size: 11px;
   }
 
-  .list-card {
-    padding: 18px;
-    border-radius: 18px;
-  }
-
   .page-title {
     font-size: 29px;
   }
@@ -553,11 +473,6 @@ onMounted(async () => {
     font-size: 22px;
   }
 
-  .card-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .status-banner {
     flex-direction: column;
     align-items: flex-start;
@@ -565,11 +480,6 @@ onMounted(async () => {
 
   .status-banner-action {
     width: 100%;
-  }
-
-  .list-card-chip {
-    width: 100%;
-    justify-content: space-between;
   }
 
   .page-credit {
