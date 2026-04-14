@@ -41,60 +41,61 @@
       </div>
 
       <div v-if="machine.specifications?.length > 2" class="spec-toggle-row">
-        <button
-          type="button"
-          class="secondary small-btn"
+        <BaseButton
+          variant="secondary"
+          size="xs"
+          class="small-btn"
           @click="emit('toggle-expanded', machine._id)"
           :aria-label="isExpanded ? 'Daha az göster' : 'Tüm özellikleri göster'"
         >
           {{ isExpanded ? "Daha Az Göster" : "Tüm Özellikleri Göster" }}
-        </button>
+        </BaseButton>
       </div>
     </td>
 
     <td class="action-cell-wrap">
       <div class="action-cell">
-        <button
-          type="button"
-          class="secondary icon-btn"
+        <IconButton
+          variant="secondary"
+          size="sm"
           @click="emit('edit', machine)"
           title="Düzenle"
           aria-label="Kaydı düzenle"
         >
           <Pencil :size="15" />
-        </button>
+        </IconButton>
 
-        <button
-          type="button"
-          class="secondary icon-btn"
+        <IconButton
+          variant="secondary"
+          size="sm"
           @click="emit('copy', machine)"
           title="Kopyala"
           aria-label="Kaydı kopyala"
         >
           <Copy :size="15" />
-        </button>
+        </IconButton>
 
-        <button
-          type="button"
-          class="secondary icon-btn"
+        <IconButton
+          variant="secondary"
+          size="sm"
           @click="emit('export-single', machine)"
           title="Excel'e Aktar"
           :disabled="isExporting"
           aria-label="Kaydı Excel'e aktar"
         >
           <FileSpreadsheet :size="15" />
-        </button>
+        </IconButton>
 
-        <button
-          type="button"
-          class="danger icon-btn"
+        <IconButton
+          variant="danger"
+          size="sm"
           @click="emit('delete', machine)"
           title="Sil"
           :disabled="isDeleting"
           aria-label="Kaydı sil"
         >
           <Trash2 :size="15" />
-        </button>
+        </IconButton>
       </div>
     </td>
   </tr>
@@ -103,6 +104,8 @@
 <script setup>
 import { computed } from "vue";
 import { Copy, FileSpreadsheet, Pencil, Trash2 } from "lucide-vue-next";
+import BaseButton from "../ui/BaseButton.vue";
+import IconButton from "../ui/IconButton.vue";
 
 const props = defineProps({
   machine: {
@@ -247,57 +250,8 @@ const visibleSpecifications = computed(() => {
 }
 
 .small-btn {
-  height: 30px;
   min-width: 78px;
-  padding: 0 8px;
-  border-radius: 8px;
-  font-size: 12px;
   font-weight: 600;
-}
-
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.icon-btn {
-  width: 34px;
-  min-width: 34px;
-  height: 34px;
-  padding: 0;
-  border-radius: 10px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-}
-
-.icon-btn svg {
-  display: block;
-  flex: 0 0 auto;
-  stroke-width: 2;
-}
-
-.secondary {
-  background: var(--bg-muted);
-  color: var(--text-secondary);
-  border: 1px solid var(--border-soft);
-}
-
-.secondary:hover {
-  background: var(--bg-hover);
-}
-
-.danger {
-  background: var(--danger);
-  color: var(--text-inverse);
-  border: 1px solid var(--danger);
-}
-
-.danger:hover {
-  background: var(--danger-strong);
-  border-color: var(--danger-strong);
 }
 
 @media (max-width: 700px) {

@@ -23,39 +23,47 @@
     </div>
 
     <div class="pagination-controls">
-      <button
+      <BaseButton
         type="button"
-        class="pager-btn secondary"
+        variant="secondary"
+        size="compact"
+        class="pager-btn"
         @click="emit('previous-page')"
         :disabled="currentPage <= 1"
       >
         Önceki
-      </button>
+      </BaseButton>
 
-      <button
+      <BaseButton
         v-for="page in visiblePageNumbers"
         :key="page"
         type="button"
+        variant="neutral"
+        size="compact"
         class="pager-btn"
-        :class="{ active: page === currentPage }"
+        :active="page === currentPage"
         @click="emit('go-to-page', page)"
       >
         {{ page }}
-      </button>
+      </BaseButton>
 
-      <button
+      <BaseButton
         type="button"
-        class="pager-btn secondary"
+        variant="secondary"
+        size="compact"
+        class="pager-btn"
         @click="emit('next-page')"
         :disabled="currentPage >= totalPages"
       >
         Sonraki
-      </button>
+      </BaseButton>
     </div>
   </div>
 </template>
 
 <script setup>
+import BaseButton from "../ui/BaseButton.vue";
+
 defineProps({
   filteredCount: {
     type: Number,
@@ -153,36 +161,7 @@ const emit = defineEmits([
 
 .pager-btn {
   min-width: 40px;
-  height: 40px;
-  padding: 0 14px;
-  border-radius: 10px;
-  border: 1px solid var(--border-soft);
-  background: var(--bg-input);
-  color: var(--text-secondary);
-  font: inherit;
   font-size: 13px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.18s ease;
-}
-
-.pager-btn:hover:not(:disabled) {
-  background: var(--bg-hover);
-}
-
-.pager-btn.active {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
-  border-color: var(--accent);
-  color: var(--text-inverse);
-}
-
-.pager-btn.secondary {
-  background: var(--bg-muted);
-}
-
-.pager-btn:disabled {
-  opacity: 0.55;
-  cursor: not-allowed;
 }
 
 @media (max-width: 900px) {

@@ -34,9 +34,9 @@
       </div>
 
       <div class="toolbar-actions">
-        <button type="button" class="secondary" @click="emit('clear')">
+        <BaseButton type="button" variant="secondary" size="md" @click="emit('clear')">
           Filtreleri Temizle
-        </button>
+        </BaseButton>
       </div>
     </div>
 
@@ -55,6 +55,8 @@
 </template>
 
 <script setup>
+import BaseButton from "../ui/BaseButton.vue";
+
 defineProps({
   powers: {
     type: Array,
@@ -133,10 +135,9 @@ const emit = defineEmits([
   justify-content: flex-end;
 }
 
-.toolbar-actions .secondary {
+.toolbar-actions :deep(.base-button) {
   height: 44px;
   padding: 0 14px;
-  border-radius: 12px;
   font-size: 13px;
   font-weight: 600;
 }
@@ -173,18 +174,6 @@ const emit = defineEmits([
   font-weight: 600;
 }
 
-.secondary {
-  background: var(--bg-muted);
-  color: var(--text-secondary);
-  border: 1px solid var(--border-soft);
-  cursor: pointer;
-  transition: all 0.18s ease;
-}
-
-.secondary:hover {
-  background: var(--bg-hover);
-}
-
 @media (max-width: 1100px) {
   .list-toolbar {
     grid-template-columns: 1fr;
@@ -202,13 +191,14 @@ const emit = defineEmits([
   }
 
   .toolbar-field input,
-  .toolbar-field select,
-  .toolbar-actions .secondary {
+  .toolbar-field select {
     height: 42px;
     font-size: 12.5px;
   }
 
-  .toolbar-actions .secondary {
+  .toolbar-actions :deep(.base-button) {
+    height: 42px;
+    font-size: 12.5px;
     width: 100%;
   }
 

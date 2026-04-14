@@ -11,12 +11,24 @@
       <p :id="messageId" class="confirm-message">{{ message }}</p>
 
       <div class="confirm-actions">
-        <button type="button" class="cancel-btn" @click="$emit('cancel')">
+        <BaseButton
+          type="button"
+          variant="secondary"
+          size="md"
+          class="cancel-btn"
+          @click="$emit('cancel')"
+        >
           {{ cancelText }}
-        </button>
-        <button type="button" class="confirm-btn" @click="$emit('confirm')">
+        </BaseButton>
+        <BaseButton
+          type="button"
+          variant="danger"
+          size="md"
+          class="confirm-btn"
+          @click="$emit('confirm')"
+        >
           {{ confirmText }}
-        </button>
+        </BaseButton>
       </div>
     </div>
   </div>
@@ -24,6 +36,7 @@
 
 <script setup>
 import { computed } from "vue";
+import BaseButton from "./BaseButton.vue";
 
 const props = defineProps({
   visible: {
@@ -98,37 +111,8 @@ const messageId = computed(() => `confirm-message-${props.message.length || 0}`)
   margin-top: 24px;
 }
 
-.confirm-actions button {
+.confirm-actions :deep(.base-button) {
   min-width: 110px;
-  height: 44px;
-  border-radius: 12px;
-  border: 1px solid transparent;
-  padding: 0 16px;
-  font: inherit;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.18s ease;
-}
-
-.cancel-btn {
-  background: var(--bg-muted);
-  color: var(--text-secondary);
-  border-color: var(--border-soft);
-}
-
-.cancel-btn:hover {
-  background: var(--bg-hover);
-}
-
-.confirm-btn {
-  background: var(--danger);
-  color: var(--text-inverse);
-  border-color: var(--danger);
-}
-
-.confirm-btn:hover {
-  background: var(--danger-strong);
-  border-color: var(--danger-strong);
 }
 
 @media (max-width: 640px) {
@@ -141,7 +125,7 @@ const messageId = computed(() => `confirm-message-${props.message.length || 0}`)
     flex-direction: column-reverse;
   }
 
-  .confirm-actions button {
+  .confirm-actions :deep(.base-button) {
     width: 100%;
   }
 }

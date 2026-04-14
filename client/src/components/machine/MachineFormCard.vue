@@ -28,23 +28,25 @@
               @input="$emit('update:newPowerName', $event.target.value)"
             />
 
-            <button
-              type="button"
-              class="secondary form-icon-btn"
+            <IconButton
+              variant="secondary"
+              size="md"
+              class="form-icon-btn"
               @click="$emit('add-power')"
               title="Güç Ekle"
             >
               <Plus :size="16" />
-            </button>
+            </IconButton>
 
-            <button
-              type="button"
-              class="danger form-icon-btn"
+            <IconButton
+              variant="danger"
+              size="md"
+              class="form-icon-btn"
               @click="$emit('delete-selected-power')"
               title="Seçileni Sil"
             >
               <Trash2 :size="16" />
-            </button>
+            </IconButton>
           </div>
         </div>
 
@@ -96,50 +98,55 @@
 
       <div class="actions">
         <div class="action-group action-group-primary">
-          <button
+          <BaseButton
             type="submit"
-            class="primary form-icon-btn"
+            variant="primary"
+            size="md"
+            class="form-icon-btn"
             :title="editingMachineId ? 'Güncelle' : 'Kaydet'"
             :disabled="isSaving"
           >
             <Save :size="16" />
             <span>{{ isSaving ? "Kaydediliyor..." : editingMachineId ? "Güncelle" : "Kaydet" }}</span>
-          </button>
+          </BaseButton>
 
-          <button
-            type="button"
-            class="secondary form-icon-btn"
+          <BaseButton
+            variant="secondary"
+            size="md"
+            class="form-icon-btn"
             @click="$emit('reset')"
             title="Formu Temizle"
             :disabled="isSaving"
           >
             <RotateCcw :size="16" />
             <span>Formu Temizle</span>
-          </button>
+          </BaseButton>
         </div>
 
         <div class="action-group">
-          <button
-            type="button"
-            class="secondary form-icon-btn"
+          <BaseButton
+            variant="secondary"
+            size="md"
+            class="form-icon-btn"
             @click="$emit('export-all')"
             title="Tüm Listeyi Excel'e Aktar"
             :disabled="isExporting"
           >
             <FileSpreadsheet :size="16" />
             <span>{{ isExporting ? "Aktarılıyor..." : "Tüm Listeyi Aktar" }}</span>
-          </button>
+          </BaseButton>
 
-          <button
-            type="button"
-            class="secondary form-icon-btn"
+          <BaseButton
+            variant="secondary"
+            size="md"
+            class="form-icon-btn"
             @click="$emit('export-selected')"
             title="Seçili Kayıtları Excel'e Aktar"
             :disabled="isExporting"
           >
             <Download :size="16" />
             <span>{{ isExporting ? "Aktarılıyor..." : "Seçili Kayıtları Aktar" }}</span>
-          </button>
+          </BaseButton>
 
           <label
             class="upload-button secondary form-icon-btn"
@@ -158,6 +165,8 @@
 
 <script setup>
 import { Download, FileSpreadsheet, Plus, RotateCcw, Save, Trash2, Upload } from "lucide-vue-next";
+import BaseButton from "../ui/BaseButton.vue";
+import IconButton from "../ui/IconButton.vue";
 import SpecificationEditor from "./SpecificationEditor.vue";
 
 const props = defineProps({
@@ -294,7 +303,6 @@ label {
 
 input,
 select,
-button,
 .upload-button {
   font: inherit;
 }
@@ -324,7 +332,6 @@ select:focus {
   box-shadow: 0 0 0 4px var(--accent-focus);
 }
 
-button,
 .upload-button {
   height: 44px;
   border-radius: 12px;
@@ -348,49 +355,24 @@ button,
 .form-icon-btn span {
   display: inline-block;
 }
-.form-icon-btn svg {
+.form-icon-btn :deep(svg) {
   flex: 0 0 auto;
-  stroke-width: 2;
 }
-button:disabled,
+
 .upload-button.disabled {
   opacity: 0.6;
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.primary {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
-  color: var(--text-inverse);
-  border-color: var(--accent);
-  box-shadow: 0 12px 24px rgba(31, 111, 87, 0.18);
-}
-
-.primary:hover {
-  transform: translateY(-1px);
-  background: linear-gradient(135deg, var(--accent-strong) 0%, #123d31 100%);
-  border-color: var(--accent-strong);
-}
-
-.secondary {
+.upload-button.secondary {
   background: var(--bg-muted);
   color: var(--text-secondary);
   border-color: var(--border-soft);
 }
 
-.secondary:hover {
+.upload-button.secondary:hover {
   background: var(--bg-hover);
-}
-
-.danger {
-  background: var(--danger);
-  color: var(--text-inverse);
-  border-color: var(--danger);
-}
-
-.danger:hover {
-  background: var(--danger-strong);
-  border-color: var(--danger-strong);
 }
 
 .actions {
