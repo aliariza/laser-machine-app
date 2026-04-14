@@ -133,7 +133,7 @@ function removeSpecification(index) {
   margin: 0;
   font-size: 17px;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--text-primary);
 }
 
 .spec-row {
@@ -154,22 +154,22 @@ input {
   height: 44px;
   padding: 0 14px;
   border-radius: 12px;
-  border: 1px solid #dbe3ef;
-  background: #ffffff;
-  color: #1f2937;
+  border: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--text-primary);
   font-size: 14px;
   transition: all 0.18s ease;
   box-sizing: border-box;
 }
 
 input::placeholder {
-  color: #94a3b8;
+  color: var(--text-muted);
 }
 
 input:focus {
   outline: none;
-  border-color: #0a84ff;
-  box-shadow: 0 0 0 4px rgba(10, 132, 255, 0.12);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-focus);
 }
 
 button {
@@ -200,24 +200,24 @@ button {
 }
 
 .secondary {
-  background: #f4f7fb;
-  color: #334155;
-  border-color: #d7e0ec;
+  background: var(--bg-muted);
+  color: var(--text-secondary);
+  border-color: var(--border-soft);
 }
 
 .secondary:hover {
-  background: #eaf0f8;
+  background: #edf3ef;
 }
 
 .danger {
-  background: #e02424;
-  color: #ffffff;
-  border-color: #e02424;
+  background: var(--danger);
+  color: var(--text-inverse);
+  border-color: var(--danger);
 }
 
 .danger:hover {
-  background: #c81e1e;
-  border-color: #c81e1e;
+  background: var(--danger-strong);
+  border-color: var(--danger-strong);
 }
 
 @media (max-width: 1100px) {

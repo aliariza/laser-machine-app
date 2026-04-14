@@ -91,9 +91,9 @@ const emit = defineEmits([
 .list-toolbar {
   display: grid;
   grid-template-columns: minmax(220px, 1.5fr) 150px 170px auto;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .toolbar-field {
@@ -103,26 +103,26 @@ const emit = defineEmits([
 .toolbar-field input,
 .toolbar-field select {
   width: 100%;
-  height: 40px;
+  height: 44px;
   padding: 0 14px;
-  border-radius: 10px;
-  border: 1px solid #dbe3ef;
-  background: #ffffff;
-  color: #1f2937;
+  border-radius: 12px;
+  border: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--text-primary);
   font-size: 13px;
   transition: all 0.18s ease;
   box-sizing: border-box;
 }
 
 .toolbar-field input::placeholder {
-  color: #94a3b8;
+  color: var(--text-muted);
 }
 
 .toolbar-field input:focus,
 .toolbar-field select:focus {
   outline: none;
-  border-color: #0a84ff;
-  box-shadow: 0 0 0 4px rgba(10, 132, 255, 0.12);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-focus);
 }
 
 .toolbar-actions {
@@ -131,9 +131,9 @@ const emit = defineEmits([
 }
 
 .toolbar-actions .secondary {
-  height: 40px;
+  height: 44px;
   padding: 0 14px;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 13px;
   font-weight: 600;
 }
@@ -149,30 +149,30 @@ const emit = defineEmits([
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 7px 12px;
+  padding: 9px 14px;
   border-radius: 999px;
-  background: #f8fbff;
-  border: 1px solid #dbe6f3;
-  color: #475569;
+  background: var(--bg-accent-soft);
+  border: 1px solid var(--border-accent);
+  color: var(--text-secondary);
   font-size: 12.5px;
   font-weight: 600;
 }
 
 .summary-pill strong {
-  color: #1f2937;
+  color: var(--text-primary);
   font-weight: 700;
 }
 
 .secondary {
-  background: #f4f7fb;
-  color: #334155;
-  border: 1px solid #d7e0ec;
+  background: var(--bg-muted);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-soft);
   cursor: pointer;
   transition: all 0.18s ease;
 }
 
 .secondary:hover {
-  background: #eaf0f8;
+  background: #edf3ef;
 }
 
 @media (max-width: 1100px) {

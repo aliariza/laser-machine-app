@@ -105,9 +105,9 @@ const emit = defineEmits([
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  margin-top: 18px;
+  margin-top: 22px;
   padding-top: 18px;
-  border-top: 1px solid #edf2f7;
+  border-top: 1px solid var(--border-soft);
 }
 
 .pagination-summary {
@@ -121,7 +121,7 @@ const emit = defineEmits([
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: #475569;
+  color: var(--text-secondary);
   font-size: 13px;
   font-weight: 600;
 }
@@ -131,14 +131,14 @@ const emit = defineEmits([
   min-width: 78px;
   padding: 0 12px;
   border-radius: 10px;
-  border: 1px solid #dbe3ef;
-  background: #ffffff;
-  color: #1f2937;
+  border: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--text-primary);
   font: inherit;
 }
 
 .range-text {
-  color: #64748b;
+  color: var(--text-muted);
   font-size: 13px;
   font-weight: 600;
 }
@@ -156,9 +156,9 @@ const emit = defineEmits([
   height: 40px;
   padding: 0 14px;
   border-radius: 10px;
-  border: 1px solid #d7e0ec;
-  background: #ffffff;
-  color: #334155;
+  border: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--text-secondary);
   font: inherit;
   font-size: 13px;
   font-weight: 700;
@@ -167,17 +167,17 @@ const emit = defineEmits([
 }
 
 .pager-btn:hover:not(:disabled) {
-  background: #eef4fb;
+  background: #edf3ef;
 }
 
 .pager-btn.active {
-  background: #0a84ff;
-  border-color: #0a84ff;
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+  border-color: var(--accent);
+  color: var(--text-inverse);
 }
 
 .pager-btn.secondary {
-  background: #f4f7fb;
+  background: var(--bg-muted);
 }
 
 .pager-btn:disabled {

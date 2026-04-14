@@ -210,11 +210,14 @@ function updateSpecifications(specifications) {
 
 <style scoped>
 .form-card {
-  background: #ffffff;
-  border: 1px solid #e6ebf2;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-  padding: 24px;
+  position: sticky;
+  top: 24px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(16px);
+  padding: 26px;
 }
 
 .card-header {
@@ -228,7 +231,7 @@ function updateSpecifications(specifications) {
   margin: 0;
   font-size: 20px;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--text-primary);
 }
 
 .machine-form {
@@ -256,7 +259,7 @@ function updateSpecifications(specifications) {
 label {
   font-size: 14px;
   font-weight: 600;
-  color: #334155;
+  color: var(--text-secondary);
 }
 
 .inline-row {
@@ -278,23 +281,23 @@ select {
   height: 44px;
   padding: 0 14px;
   border-radius: 12px;
-  border: 1px solid #dbe3ef;
-  background: #ffffff;
-  color: #1f2937;
+  border: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--text-primary);
   font-size: 14px;
   transition: all 0.18s ease;
   box-sizing: border-box;
 }
 
 input::placeholder {
-  color: #94a3b8;
+  color: var(--text-muted);
 }
 
 input:focus,
 select:focus {
   outline: none;
-  border-color: #0a84ff;
-  box-shadow: 0 0 0 4px rgba(10, 132, 255, 0.12);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-focus);
 }
 
 button,
@@ -333,35 +336,37 @@ button:disabled,
 }
 
 .primary {
-  background: #1677ff;
-  color: #ffffff;
-  border-color: #1677ff;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+  color: var(--text-inverse);
+  border-color: var(--accent);
+  box-shadow: 0 12px 24px rgba(31, 111, 87, 0.18);
 }
 
 .primary:hover {
-  background: #0f67df;
-  border-color: #0f67df;
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, var(--accent-strong) 0%, #123d31 100%);
+  border-color: var(--accent-strong);
 }
 
 .secondary {
-  background: #f4f7fb;
-  color: #334155;
-  border-color: #d7e0ec;
+  background: var(--bg-muted);
+  color: var(--text-secondary);
+  border-color: var(--border-soft);
 }
 
 .secondary:hover {
-  background: #eaf0f8;
+  background: #edf3ef;
 }
 
 .danger {
-  background: #e02424;
-  color: #ffffff;
-  border-color: #e02424;
+  background: var(--danger);
+  color: var(--text-inverse);
+  border-color: var(--danger);
 }
 
 .danger:hover {
-  background: #c81e1e;
-  border-color: #c81e1e;
+  background: var(--danger-strong);
+  border-color: var(--danger-strong);
 }
 
 .actions {
@@ -390,7 +395,8 @@ button:disabled,
 @media (max-width: 700px) {
   .form-card {
     padding: 18px;
-    border-radius: 16px;
+    border-radius: 18px;
+    position: static;
   }
 
   .section-title {

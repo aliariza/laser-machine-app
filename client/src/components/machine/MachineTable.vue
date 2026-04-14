@@ -179,14 +179,14 @@ function toggleSelection(machineId, checked) {
 <style scoped>
 .table-wrap {
   overflow-x: auto;
-  border-top: 1px solid #edf2f7;
-  padding-top: 10px;
+  border-top: 1px solid var(--border-soft);
+  padding-top: 12px;
 }
 
 table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0;
+  border-spacing: 0 8px;
   font-size: 14px;
 }
 
@@ -194,14 +194,15 @@ thead th {
   position: sticky;
   top: 0;
   z-index: 1;
-  background: #f7f9fc;
-  color: #64748b;
+  background: transparent;
+  color: var(--text-muted);
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   text-align: left;
-  padding: 14px 12px;
-  border-bottom: 1px solid #e5ebf3;
+  padding: 10px 12px 6px;
+  border-bottom: none;
 }
 
 thead th:first-child,
@@ -216,17 +217,25 @@ thead th:nth-child(7) {
 
 tbody td {
   padding: 12px 12px;
-  border-bottom: 1px solid #edf2f7;
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.74);
   vertical-align: top;
-  color: #334155;
+  color: var(--text-secondary);
 }
 
-tbody tr:nth-child(even) td {
-  background: #fbfcfe;
+tbody td:first-child {
+  border-left: 1px solid var(--border-soft);
+  border-radius: 16px 0 0 16px;
+}
+
+tbody td:last-child {
+  border-right: 1px solid var(--border-soft);
+  border-radius: 0 16px 16px 0;
 }
 
 tbody tr:hover td {
-  background: #f4f8fd;
+  background: rgba(245, 249, 246, 0.98);
 }
 
 .center-cell {
@@ -247,24 +256,24 @@ tbody tr:hover td {
 }
 
 .badge-power {
-  background: #e8f1ff;
-  color: #1d4ed8;
+  background: #dff1e8;
+  color: var(--accent-strong);
 }
 
 .badge-table {
-  background: #eefaf0;
-  color: #15803d;
+  background: #edf5e3;
+  color: #4a6a20;
 }
 
 .badge-machine {
-  background: #fff4e8;
-  color: #c2410c;
+  background: #fff0e3;
+  color: #a95522;
 }
 
 .model-text {
   font-size: 14px;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--text-primary);
 }
 
 .specs-cell {
@@ -274,7 +283,7 @@ tbody tr:hover td {
 .spec-list {
   margin: 0;
   padding-left: 16px;
-  color: #6b7280;
+  color: var(--text-secondary);
   line-height: 1.35;
   font-size: 12.5px;
 }
@@ -284,7 +293,7 @@ tbody tr:hover td {
 }
 
 .spec-list strong {
-  color: #334155;
+  color: var(--text-primary);
   font-weight: 700;
 }
 
@@ -292,7 +301,7 @@ tbody tr:hover td {
   margin-top: 6px;
   font-size: 12px;
   font-weight: 600;
-  color: #94a3b8;
+  color: var(--text-muted);
 }
 
 .spec-toggle-row {
@@ -338,9 +347,9 @@ td input[type="checkbox"] {
   height: 18px;
   margin: 0 auto;
   padding: 0;
-  border: 1.5px solid #c7d2e3;
+  border: 1.5px solid rgba(20, 40, 31, 0.2);
   border-radius: 3px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9);
   box-sizing: border-box;
   display: block;
   position: relative;
@@ -349,8 +358,8 @@ td input[type="checkbox"] {
 }
 
 td input[type="checkbox"]:checked {
-  background-color: #1677ff;
-  border-color: #1677ff;
+  background-color: var(--accent);
+  border-color: var(--accent);
 }
 
 td input[type="checkbox"]:checked::after {
@@ -368,7 +377,9 @@ td input[type="checkbox"]:checked::after {
 .empty-cell {
   text-align: center;
   padding: 28px 12px;
-  color: #94a3b8;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
 }
 
 .icon-btn {
@@ -384,23 +395,23 @@ td input[type="checkbox"]:checked::after {
 }
 
 .secondary {
-  background: #f4f7fb;
-  color: #334155;
-  border: 1px solid #d7e0ec;
+  background: var(--bg-muted);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-soft);
 }
 
 .secondary:hover {
-  background: #eaf0f8;
+  background: #edf3ef;
 }
 
 .danger {
-  background: #e02424;
-  color: #ffffff;
-  border: 1px solid #e02424;
+  background: var(--danger);
+  color: var(--text-inverse);
+  border: 1px solid var(--danger);
 }
 
 .danger:hover {
-  background: #c81e1e;
-  border-color: #c81e1e;
+  background: var(--danger-strong);
+  border-color: var(--danger-strong);
 }
 </style>
