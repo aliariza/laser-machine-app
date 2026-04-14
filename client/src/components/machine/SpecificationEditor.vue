@@ -243,7 +243,23 @@ button {
   }
 
   .spec-row-actions {
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .spec-row-actions button {
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .spec-row-actions .secondary {
+    background: rgba(255, 255, 255, 0.78);
+  }
+
+  .spec-row-actions .danger {
+    background: #dc624d;
+    border-color: #dc624d;
   }
 }
 
@@ -253,15 +269,7 @@ button {
   }
 
   .spec-row {
-    gap: 10px;
-  }
-
-  .spec-row-actions {
-    justify-content: stretch;
-  }
-
-  .spec-row-actions button {
-    flex: 1 1 0;
+    gap: 9px;
   }
 }
 </style>
