@@ -3,7 +3,7 @@
     <div class="container">
       <div class="page-header">
         <div class="page-header-copy">
-          <div class="page-eyebrow">Laser Machine Control Desk</div>
+          <div class="page-eyebrow">Lazer Makinaları Kontrol MASASI</div>
           <h1 class="page-title">Makine Teknik Veri Yönetimi</h1>
           <p class="page-subtitle">
             Makine kayıtları, teknik özellikler ve Excel çıktıları
@@ -227,7 +227,7 @@ onMounted(async () => {
   display: inline-flex;
   align-items: center;
   min-height: 34px;
-  padding: 0 14px;
+  padding: 0 18px;
   margin-bottom: 14px;
   border-radius: 999px;
   border: 1px solid var(--border-accent);
@@ -443,7 +443,7 @@ onMounted(async () => {
 
   .page-eyebrow {
     min-height: 30px;
-    padding: 0 12px;
+    padding: 0 14px;
     margin-bottom: 10px;
     font-size: 11px;
   }
