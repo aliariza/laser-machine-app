@@ -15,67 +15,68 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 6 0 obj
-<< /Length 4072 >>
+<< /Length 4151 >>
 stream
 0.25 w
 0 G
 1 J
 1 j
-BT /F2 22 Tf 1 0 0 1 42 804 Tm (Laser Machine App) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 786 Tm (Repo Summary | Generated from README and source files) Tj ET
-42 774 m 553 774 l S
-BT /F2 11 Tf 1 0 0 1 42 758 Tm (What It Is) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 745 Tm (A full-stack app for managing laser machine technical data. The repo provides a Vue 3 + Vite frontend and an) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 734 Tm (Express + MongoDB backend with machine CRUD plus Excel import and export flows.) Tj ET
-BT /F2 11 Tf 1 0 0 1 42 717 Tm (Who It's For) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 704 Tm (Primary persona: internal staff who maintain machine technical records and prepare Excel outputs for review) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 693 Tm (or sharing. Exact job title not found in repo.) Tj ET
-BT /F2 11 Tf 1 0 0 1 42 676 Tm (What It Does) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 663 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 663 Tm (Create, edit, copy, and delete machine records.) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 651 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 651 Tm (Manage power options used by machine records.) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 639 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 639 Tm (Capture structured specifications as key-value pairs.) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 627 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 627 Tm (Filter machines by model, power, and machine type.) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 615 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 615 Tm (Paginate the machine list in the UI.) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 603 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 603 Tm (Export all, selected, or single-machine records to Excel.) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 591 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 591 Tm (Import machine data from Excel uploads.) Tj ET
-BT /F2 11 Tf 1 0 0 1 42 574 Tm (How It Works) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 561 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 561 Tm (Client: a single Vue view \(`TechnicalDataEntryView`\) composes form, filters, table, pagination, toast,) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 550 Tm (and confirm-dialog components.) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 538 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 538 Tm (State and actions live in `useMachinePage`, which calls Axios services in `client/src/services/`.) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 526 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 526 Tm (API: Express mounts `/api/powers` and `/api/machines`, adds JSON parsing and CORS, and exposes) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 515 Tm (`/api/health`.) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 503 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 503 Tm (Data layer: Mongoose models `Machine` and `Power` persist to MongoDB; `Machine` references `Power` by) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 492 Tm (`powerId`.) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 480 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 480 Tm (File flow: Excel uploads are accepted with `multer` memory storage, parsed with ExcelJS, and written into) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 469 Tm (MongoDB records.) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 457 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 457 Tm (Output flow: ExcelJS generates workbooks for all machines, selected machines, or a single machine; image) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 446 Tm (paths are embedded if files exist on the server.) Tj ET
-BT /F2 11 Tf 1 0 0 1 42 429 Tm (How To Run) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 416 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 416 Tm (Install deps: `npm install --prefix client` and `npm install --prefix server`.) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 404 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 404 Tm (Create local env files from `client/.env.example` and `server/.env.example`.) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 392 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 392 Tm (Start MongoDB and set `MONGODB_URI` if not using the default local database.) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 380 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 380 Tm (Run backend: `cd server && npm run dev`.) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 368 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 368 Tm (Run frontend: `cd client && npm run dev`.) Tj ET
-BT /F1 9 Tf 1 0 0 1 42 356 Tm (-) Tj ET
-BT /F1 9 Tf 1 0 0 1 54 356 Tm (Open `http://localhost:5173`; `/api` is proxied to `http://localhost:4000`.) Tj ET
+BT /F2 9 Tf 1 0 0 1 42 804 Tm (https://www.laser-machine-app.vercel.app) Tj ET
+BT /F2 22 Tf 1 0 0 1 42 786 Tm (Laser Machine App) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 768 Tm (Repo Summary | Generated from README and source files) Tj ET
+42 756 m 553 756 l S
+BT /F2 11 Tf 1 0 0 1 42 740 Tm (What It Is) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 727 Tm (A full-stack app for managing laser machine technical data. The repo provides a Vue 3 + Vite frontend and an) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 716 Tm (Express + MongoDB backend with machine CRUD plus Excel import and export flows.) Tj ET
+BT /F2 11 Tf 1 0 0 1 42 699 Tm (Who It's For) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 686 Tm (Primary persona: internal staff who maintain machine technical records and prepare Excel outputs for review) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 675 Tm (or sharing. Exact job title not found in repo.) Tj ET
+BT /F2 11 Tf 1 0 0 1 42 658 Tm (What It Does) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 645 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 645 Tm (Create, edit, copy, and delete machine records.) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 633 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 633 Tm (Manage power options used by machine records.) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 621 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 621 Tm (Capture structured specifications as key-value pairs.) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 609 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 609 Tm (Filter machines by model, power, and machine type.) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 597 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 597 Tm (Paginate the machine list in the UI.) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 585 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 585 Tm (Export all, selected, or single-machine records to Excel.) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 573 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 573 Tm (Import machine data from Excel uploads.) Tj ET
+BT /F2 11 Tf 1 0 0 1 42 556 Tm (How It Works) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 543 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 543 Tm (Client: a single Vue view \(`TechnicalDataEntryView`\) composes form, filters, table, pagination, toast,) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 532 Tm (and confirm-dialog components.) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 520 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 520 Tm (State and actions live in `useMachinePage`, which calls Axios services in `client/src/services/`.) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 508 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 508 Tm (API: Express mounts `/api/powers` and `/api/machines`, adds JSON parsing and CORS, and exposes) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 497 Tm (`/api/health`.) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 485 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 485 Tm (Data layer: Mongoose models `Machine` and `Power` persist to MongoDB; `Machine` references `Power` by) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 474 Tm (`powerId`.) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 462 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 462 Tm (File flow: Excel uploads are accepted with `multer` memory storage, parsed with ExcelJS, and written into) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 451 Tm (MongoDB records.) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 439 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 439 Tm (Output flow: ExcelJS generates workbooks for all machines, selected machines, or a single machine; image) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 428 Tm (paths are embedded if files exist on the server.) Tj ET
+BT /F2 11 Tf 1 0 0 1 42 411 Tm (How To Run) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 398 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 398 Tm (Install deps: `npm install --prefix client` and `npm install --prefix server`.) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 386 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 386 Tm (Create local env files from `client/.env.example` and `server/.env.example`.) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 374 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 374 Tm (Start MongoDB and set `MONGODB_URI` if not using the default local database.) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 362 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 362 Tm (Run backend: `cd server && npm run dev`.) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 350 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 350 Tm (Run frontend: `cd client && npm run dev`.) Tj ET
+BT /F1 9 Tf 1 0 0 1 42 338 Tm (-) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 338 Tm (Open `http://localhost:5173`; `/api` is proxied to `http://localhost:4000`.) Tj ET
 endstream
 endobj
 xref
@@ -90,5 +91,5 @@ xref
 trailer
 << /Size 7 /Root 1 0 R >>
 startxref
-4520
+4599
 %%EOF
