@@ -277,7 +277,7 @@ router.get("/", async (req, res) => {
 
     res.json(machines);
   } catch (error) {
-    res.status(500).json({ message: "Failed to fetch machines", error: error.message });
+    res.status(500).json({ message: "Makine listesi alınamadı", error: error.message });
   }
 });
 
@@ -286,7 +286,7 @@ router.post("/export/excel/selected", async (req, res) => {
     const { machineIds } = req.body;
 
     if (!Array.isArray(machineIds) || machineIds.length === 0) {
-      return res.status(400).json({ message: "No machines selected" });
+      return res.status(400).json({ message: "Hiç makine seçilmedi" });
     }
 
     const machines = await Machine.find({ _id: { $in: machineIds } })
@@ -294,13 +294,13 @@ router.post("/export/excel/selected", async (req, res) => {
       .sort({ createdAt: -1 });
 
     if (!machines.length) {
-      return res.status(404).json({ message: "Selected machines not found" });
+      return res.status(404).json({ message: "Seçilen makineler bulunamadı" });
     }
 
     await exportMachinesWorkbook(res, machines);
   } catch (error) {
     res.status(500).json({
-      message: "Failed to export selected machines",
+      message: "Seçilen makineler Excel'e aktarılamadı",
       error: error.message,
     });
   }
@@ -314,12 +314,12 @@ router.get("/export/excel/selected", async (req, res) => {
       .filter(Boolean);
 
     if (!machineIds.length) {
-      return res.status(400).json({ message: "No machines selected" });
+      return res.status(400).json({ message: "Hiç makine seçilmedi" });
     }
 
     const invalidMachineId = machineIds.find((id) => !isValidMachineId(id));
     if (invalidMachineId) {
-      return res.status(400).json({ message: "Invalid machine id in selection" });
+      return res.status(400).json({ message: "Seçimde geçersiz makine kimliği var" });
     }
 
     const machines = await Machine.find({ _id: { $in: machineIds } })
@@ -327,13 +327,13 @@ router.get("/export/excel/selected", async (req, res) => {
       .sort({ createdAt: -1 });
 
     if (!machines.length) {
-      return res.status(404).json({ message: "Selected machines not found" });
+      return res.status(404).json({ message: "Seçilen makineler bulunamadı" });
     }
 
     await exportMachinesWorkbook(res, machines);
   } catch (error) {
     res.status(500).json({
-      message: "Failed to export selected machines",
+      message: "Seçilen makineler Excel'e aktarılamadı",
       error: error.message,
     });
   }
@@ -342,18 +342,18 @@ router.get("/export/excel/selected", async (req, res) => {
 router.get("/export/excel/machine/:id", async (req, res) => {
   try {
     if (!isValidMachineId(req.params.id)) {
-      return res.status(400).json({ message: "Invalid machine id" });
+      return res.status(400).json({ message: "Geçersiz makine kimliği" });
     }
 
     const machine = await Machine.findById(req.params.id).populate("powerId");
 
     if (!machine) {
-      return res.status(404).json({ message: "Machine not found" });
+      return res.status(404).json({ message: "Makine bulunamadı" });
     }
 
     await exportMachinesWorkbook(res, [machine]);
   } catch (error) {
-    res.status(500).json({ message: "Failed to export machine", error: error.message });
+    res.status(500).json({ message: "Makine Excel'e aktarılamadı", error: error.message });
   }
 });
 
@@ -406,14 +406,14 @@ router.get("/export/excel/all", async (req, res) => {
     await workbook.xlsx.write(res);
     res.end();
   } catch (error) {
-    res.status(500).json({ message: "Failed to export Excel", error: error.message });
+    res.status(500).json({ message: "Excel dışa aktarımı başarısız oldu", error: error.message });
   }
 });
 
 router.post("/import/excel", upload.single("file"), async (req, res) => {
   try {
     if (!req.file) {
-      return res.status(400).json({ message: "Excel file is required" });
+      return res.status(400).json({ message: "Excel dosyası zorunludur" });
     }
 
     const workbook = new ExcelJS.Workbook();
@@ -421,7 +421,7 @@ router.post("/import/excel", upload.single("file"), async (req, res) => {
 
     const worksheet = workbook.worksheets[0];
     if (!worksheet) {
-      return res.status(400).json({ message: "Worksheet not found" });
+      return res.status(400).json({ message: "Çalışma sayfası bulunamadı" });
     }
 
     const headers = [];
@@ -470,29 +470,29 @@ router.post("/import/excel", upload.single("file"), async (req, res) => {
     }
 
     res.json({
-      message: "Excel import completed",
+      message: "Excel içe aktarma tamamlandı",
       importedCount: imported.length,
     });
   } catch (error) {
-    res.status(500).json({ message: "Failed to import Excel", error: error.message });
+    res.status(500).json({ message: "Excel içe aktarılamadı", error: error.message });
   }
 });
 
 router.get("/:id", async (req, res) => {
   try {
     if (!isValidMachineId(req.params.id)) {
-      return res.status(400).json({ message: "Invalid machine id" });
+      return res.status(400).json({ message: "Geçersiz makine kimliği" });
     }
 
     const machine = await Machine.findById(req.params.id).populate("powerId");
 
     if (!machine) {
-      return res.status(404).json({ message: "Machine not found" });
+      return res.status(404).json({ message: "Makine bulunamadı" });
     }
 
     res.json(machine);
   } catch (error) {
-    res.status(500).json({ message: "Failed to fetch machine", error: error.message });
+    res.status(500).json({ message: "Makine alınamadı", error: error.message });
   }
 });
 
@@ -501,12 +501,12 @@ router.post("/", async (req, res) => {
 const { powerId, tableType, machineType, model, imagePath, specifications, isActive } = req.body;
 
     if (!powerId || !tableType || !machineType || !model) {
-      return res.status(400).json({ message: "powerId, tableType, machineType and model are required" });
+      return res.status(400).json({ message: "powerId, tableType, machineType ve model zorunludur" });
     }
 
     const power = await Power.findById(powerId);
     if (!power) {
-      return res.status(400).json({ message: "Invalid powerId" });
+      return res.status(400).json({ message: "Geçersiz powerId" });
     }
 
     const machine = await Machine.create({
@@ -522,14 +522,14 @@ const { powerId, tableType, machineType, model, imagePath, specifications, isAct
     const populated = await Machine.findById(machine._id).populate("powerId");
     res.status(201).json(populated);
   } catch (error) {
-    res.status(500).json({ message: "Failed to create machine", error: error.message });
+    res.status(500).json({ message: "Makine oluşturulamadı", error: error.message });
   }
 });
 
 router.put("/:id", async (req, res) => {
   try {
     if (!isValidMachineId(req.params.id)) {
-      return res.status(400).json({ message: "Invalid machine id" });
+      return res.status(400).json({ message: "Geçersiz makine kimliği" });
     }
 
     const { powerId, tableType, machineType, model, imagePath, specifications, isActive } = req.body;
@@ -550,30 +550,30 @@ router.put("/:id", async (req, res) => {
     }).populate("powerId");
 
     if (!machine) {
-      return res.status(404).json({ message: "Machine not found" });
+      return res.status(404).json({ message: "Makine bulunamadı" });
     }
 
     res.json(machine);
   } catch (error) {
-    res.status(500).json({ message: "Failed to update machine", error: error.message });
+    res.status(500).json({ message: "Makine güncellenemedi", error: error.message });
   }
 });
 
 router.delete("/:id", async (req, res) => {
   try {
     if (!isValidMachineId(req.params.id)) {
-      return res.status(400).json({ message: "Invalid machine id" });
+      return res.status(400).json({ message: "Geçersiz makine kimliği" });
     }
 
     const machine = await Machine.findByIdAndDelete(req.params.id);
 
     if (!machine) {
-      return res.status(404).json({ message: "Machine not found" });
+      return res.status(404).json({ message: "Makine bulunamadı" });
     }
 
-    res.json({ message: "Machine deleted successfully" });
+    res.json({ message: "Makine başarıyla silindi" });
   } catch (error) {
-    res.status(500).json({ message: "Failed to delete machine", error: error.message });
+    res.status(500).json({ message: "Makine silinemedi", error: error.message });
   }
 });
 
