@@ -3,7 +3,7 @@
     <div class="container">
       <div class="page-header">
         <div class="page-header-copy">
-          <div class="page-eyebrow">Lazer Makinaları Kontrol MASASI</div>
+          <div class="page-eyebrow">LAZER TEZGAHLARI KONTROL MASASI</div>
           <h1 class="page-title">Makine Teknik Veri Yönetimi</h1>
           <p class="page-subtitle">
             Makine kayıtları, teknik özellikler ve Excel çıktıları
