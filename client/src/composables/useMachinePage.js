@@ -258,6 +258,15 @@ async function deleteSelectedPower() {
     notify("Lütfen silmek için bir güç seçin", "error");
     return;
   }
+
+  const selectedPower = powers.value.find((power) => power._id === form.powerId);
+  const powerName = selectedPower?.name || "Seçili güç";
+  const confirmed = window.confirm(
+    `${powerName} silinecek. Emin misiniz?\nBu işlemin geri dönüşü yoktur.`
+  );
+
+  if (!confirmed) return;
+
   try {
     await deletePowerRequest(form.powerId);
     form.powerId = "";
