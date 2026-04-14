@@ -195,4 +195,31 @@ const emit = defineEmits([
     justify-content: flex-start;
   }
 }
+
+@media (max-width: 700px) {
+  .pagination-summary {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .page-size-control {
+    justify-content: space-between;
+  }
+
+  .page-size-control select {
+    min-width: 88px;
+  }
+
+  .pagination-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
+    gap: 8px;
+  }
+
+  .pager-btn {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
 </style>

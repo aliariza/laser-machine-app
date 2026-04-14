@@ -436,6 +436,18 @@ onMounted(async () => {
     padding: 20px 14px 32px;
   }
 
+  .page-header {
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+
+  .page-eyebrow {
+    min-height: 30px;
+    padding: 0 12px;
+    margin-bottom: 10px;
+    font-size: 11px;
+  }
+
   .list-card {
     padding: 18px;
     border-radius: 18px;
@@ -445,14 +457,42 @@ onMounted(async () => {
     font-size: 29px;
   }
 
+  .page-subtitle {
+    font-size: 14px;
+  }
+
+  .page-stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .header-pill {
-    min-width: 92px;
-    padding: 14px 16px;
+    min-width: 0;
+    padding: 14px 12px;
+  }
+
+  .header-pill strong {
+    font-size: 22px;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .status-banner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .status-banner-action {
+    width: 100%;
+  }
+
+  .list-card-chip {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .page-credit {

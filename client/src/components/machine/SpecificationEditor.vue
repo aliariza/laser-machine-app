@@ -241,4 +241,22 @@ button {
     justify-content: flex-end;
   }
 }
+
+@media (max-width: 700px) {
+  .subsection-copy {
+    font-size: 12px;
+  }
+
+  .spec-row {
+    gap: 10px;
+  }
+
+  .spec-row-actions {
+    justify-content: stretch;
+  }
+
+  .spec-row-actions button {
+    flex: 1 1 0;
+  }
+}
 </style>

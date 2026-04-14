@@ -442,4 +442,35 @@ td input[type="checkbox"]:checked::after {
   background: var(--danger-strong);
   border-color: var(--danger-strong);
 }
+
+@media (max-width: 700px) {
+  table {
+    min-width: 760px;
+  }
+
+  thead th {
+    font-size: 11px;
+    padding: 8px 10px 6px;
+  }
+
+  tbody td {
+    padding: 10px 10px;
+  }
+
+  .specs-cell {
+    min-width: 240px;
+  }
+
+  .spec-list {
+    font-size: 12px;
+  }
+
+  .action-cell {
+    gap: 6px;
+  }
+
+  .empty-state span {
+    max-width: 280px;
+  }
+}
 </style>

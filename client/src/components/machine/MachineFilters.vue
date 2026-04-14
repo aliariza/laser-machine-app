@@ -194,4 +194,27 @@ const emit = defineEmits([
     justify-content: flex-start;
   }
 }
+
+@media (max-width: 700px) {
+  .list-toolbar {
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .toolbar-field input,
+  .toolbar-field select,
+  .toolbar-actions .secondary {
+    height: 42px;
+    font-size: 12.5px;
+  }
+
+  .toolbar-actions .secondary {
+    width: 100%;
+  }
+
+  .summary-note {
+    width: 100%;
+    line-height: 1.45;
+  }
+}
 </style>

@@ -438,9 +438,21 @@ button:disabled,
     font-size: 18px;
   }
 
+  .section-copy {
+    font-size: 12.5px;
+  }
+
+  .field-hint {
+    font-size: 11.5px;
+  }
+
   .action-group {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .actions {
+    gap: 12px;
   }
 
   .actions .form-icon-btn,
