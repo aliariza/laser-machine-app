@@ -1,22 +1,12 @@
 // client/src/composables/useMachinePage.js
 import { computed, reactive, ref, watch } from "vue";
-import {
-  addPowerRequest,
-  deletePowerRequest,
-  fetchPowersRequest,
-} from "../services/powerService";
-import {
-  createMachineRequest,
-  deleteMachineRequest,
-  exportAllMachinesRequest,
-  fetchMachinesRequest,
-  getAllMachinesExcelExportUrl,
-  getMachineExcelExportUrl,
-  getSelectedMachinesExcelExportUrl,
-  importMachinesExcelRequest,
-  updateMachineRequest,
-} from "../services/machineService";
-
+import { useBackendStatus } from "./useBackendStatus";
+import { useConfirmDialog } from "./useConfirmDialog";
+import { useMachineCrud } from "./useMachineCrud";
+import { useMachineExport } from "./useMachineExport";
+import { usePowerCrud } from "./usePowerCrud";
+import { fetchPowersRequest } from "../services/powerService";
+import { fetchMachinesRequest } from "../services/machineService";
 
 export function useMachinePage(showToast = null) {
   function notify(text, variant = "info") {
@@ -42,15 +32,23 @@ export function useMachinePage(showToast = null) {
   const isExporting = ref(false);
   const isImporting = ref(false);
   const isDeleting = ref(false);
-  const isLoadingInitialData = ref(false);
-  const isBackendConnected = ref(true);
-  const backendMessage = ref("");
-  const confirmDialogVisible = ref(false);
-  const confirmDialogTitle = ref("");
-  const confirmDialogMessage = ref("");
-  const confirmDialogConfirmText = ref("Sil");
-  const confirmDialogCancelText = ref("İptal");
-  const pendingConfirmAction = ref(null);
+  const {
+    isBackendConnected,
+    backendMessage,
+    isLoadingInitialData,
+    markBackendAvailable,
+    setBackendUnavailable,
+  } = useBackendStatus();
+  const {
+    confirmDialogVisible,
+    confirmDialogTitle,
+    confirmDialogMessage,
+    confirmDialogConfirmText,
+    confirmDialogCancelText,
+    openConfirmDialog,
+    closeConfirmDialog,
+    confirmDialogAction,
+  } = useConfirmDialog();
 
   const defaultForm = () => ({
     powerId: "",
@@ -211,56 +209,13 @@ export function useMachinePage(showToast = null) {
   async function fetchPowers() {
     const data = await fetchPowersRequest();
     powers.value = data;
-    isBackendConnected.value = true;
-    backendMessage.value = "";
+    markBackendAvailable();
   }
 
   async function fetchMachines() {
     const data = await fetchMachinesRequest();
     machines.value = data;
-    isBackendConnected.value = true;
-    backendMessage.value = "";
-  }
-
-  function setBackendUnavailable() {
-    isBackendConnected.value = false;
-    backendMessage.value =
-      "Arayüz hazır, ancak kayıtları görmek ve kaydetmek için sunucu bağlantısının kurulması gerekiyor.";
-  }
-
-  function openConfirmDialog(
-    {
-      title = "Onay Gerekli",
-      message = "",
-      confirmText = "Sil",
-      cancelText = "İptal",
-    },
-    onConfirm
-  ) {
-    confirmDialogTitle.value = title;
-    confirmDialogMessage.value = message;
-    confirmDialogConfirmText.value = confirmText;
-    confirmDialogCancelText.value = cancelText;
-    pendingConfirmAction.value = onConfirm;
-    confirmDialogVisible.value = true;
-  }
-
-  function closeConfirmDialog() {
-    confirmDialogVisible.value = false;
-    confirmDialogTitle.value = "";
-    confirmDialogMessage.value = "";
-    confirmDialogConfirmText.value = "Sil";
-    confirmDialogCancelText.value = "İptal";
-    pendingConfirmAction.value = null;
-  }
-
-  async function confirmDialogAction() {
-    const action = pendingConfirmAction.value;
-    closeConfirmDialog();
-
-    if (typeof action === "function") {
-      await action();
-    }
+    markBackendAvailable();
   }
 
   async function loadInitialData() {
@@ -280,233 +235,42 @@ export function useMachinePage(showToast = null) {
     }
   }
 
-async function addPower() {
-  const value = newPowerName.value.trim().toUpperCase();
-  if (!value) return;
+  const { addPower, deleteSelectedPower } = usePowerCrud({
+    powers,
+    newPowerName,
+    form,
+    fetchPowers,
+    openConfirmDialog,
+    notify,
+  });
 
-  try {
-    await addPowerRequest(value);
-    newPowerName.value = "";
-    await fetchPowers();
-    notify("Güç başarıyla eklendi", "success");
-  } catch (error) {
-    notify(error?.response?.data?.message || "Güç eklenemedi", "error");
-  }
-}
+  const { saveMachine, deleteMachine } = useMachineCrud({
+    form,
+    editingMachineId,
+    selectedMachineIds,
+    isSaving,
+    isDeleting,
+    fetchMachines,
+    fetchPowers,
+    resetForm,
+    openConfirmDialog,
+    notify,
+  });
 
-async function deleteSelectedPower() {
-  if (!form.powerId) {
-    notify("Lütfen silmek için bir güç seçin", "error");
-    return;
-  }
+  const {
+    exportSingleMachine,
+    exportExcel,
+    exportSelectedExcel,
+    importExcel,
+  } = useMachineExport({
+    selectedMachineIds,
+    isExporting,
+    isImporting,
+    fetchPowers,
+    fetchMachines,
+    notify,
+  });
 
-  const selectedPower = powers.value.find((power) => power._id === form.powerId);
-  const powerName = selectedPower?.name || "Seçili güç";
-  openConfirmDialog(
-    {
-      title: "Güç Silinecek",
-      message: `${powerName} silinecek. Emin misiniz?\nBu işlemin geri dönüşü yoktur.`,
-      confirmText: "Sil",
-      cancelText: "İptal",
-    },
-    async () => {
-      try {
-        await deletePowerRequest(form.powerId);
-        form.powerId = "";
-        await fetchPowers();
-        notify("Güç silindi", "success");
-      } catch (error) {
-        notify(error?.response?.data?.message || "Güç silinemedi", "error");
-      }
-    }
-  );
-}
-
-async function saveMachine() {
-  if (isSaving.value) return;
-
-  isSaving.value = true;
-
-  try {
-    const isEditing = !!editingMachineId.value;
-
-    const payload = {
-      ...form,
-      specifications: form.specifications.filter(
-        (item) => item.key.trim() && item.value.trim()
-      ),
-    };
-
-    if (isEditing) {
-      await updateMachineRequest(editingMachineId.value, payload);
-    } else {
-      await createMachineRequest(payload);
-    }
-
-    resetForm();
-    await fetchMachines();
-    notify(isEditing ? "Makine güncellendi" : "Makine kaydedildi", "success");
-  } catch (error) {
-    notify(error?.response?.data?.message || "Makine kaydedilemedi", "error");
-  } finally {
-    isSaving.value = false;
-  }
-}
-function buildDeleteMessage(machine) {
-  const model = machine?.model?.trim() || "Bu makine";
-  const power = machine?.powerId?.name?.trim() || "";
-  const machineType = machine?.machineType?.trim() || "";
-
-  const detailParts = [model, power, machineType].filter(Boolean);
-  const detailText = detailParts.join(" ");
-
-  return `${detailText} silinecek. Emin misiniz?\nBu işlemin geri dönüşü yoktur.`;
-}
-
-async function deleteMachine(machine) {
-  if (isDeleting.value) return;
-
-  if (!machine?._id) {
-    notify("Silinecek makine bilgisi bulunamadı", "error");
-    return;
-  }
-
-  openConfirmDialog(
-    {
-      title: "Makine Silinecek",
-      message: buildDeleteMessage(machine),
-      confirmText: "Sil",
-      cancelText: "İptal",
-    },
-    async () => {
-      isDeleting.value = true;
-
-      try {
-        await deleteMachineRequest(machine._id);
-        selectedMachineIds.value = selectedMachineIds.value.filter(
-          (id) => id !== machine._id
-        );
-        await fetchMachines();
-        await fetchPowers();
-        notify("Makine silindi", "success");
-      } catch (error) {
-        notify(error?.response?.data?.message || "Makine silinemedi", "error");
-      } finally {
-        isDeleting.value = false;
-      }
-    }
-  );
-}  function buildExportFileName(machine) {
-    const safePower = (machine?.powerId?.name || "")
-      .trim()
-      .replace(/\s+/g, "_")
-      .replace(/[^\w.-]/g, "");
-
-    const safeModel = (machine?.model || "")
-      .trim()
-      .replace(/\s+/g, "_")
-      .replace(/[^\w.-]/g, "");
-
-    return `${safePower}_${safeModel}_TEKNIK_OZELLIKLER.xlsx`;
-  }
-
-  function downloadExcelBlob(blobData, fileName) {
-    const blob = new Blob([blobData], {
-      type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-    });
-
-    const url = window.URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = fileName;
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    window.URL.revokeObjectURL(url);
-  }
-
-  function downloadExcelFromUrl(url) {
-    const link = document.createElement("a");
-    link.href = url;
-    link.target = "_blank";
-    link.rel = "noopener";
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-  }
-
-async function exportSingleMachine(machine) {
-  if (isExporting.value) return;
-
-  isExporting.value = true;
-
-  try {
-    downloadExcelFromUrl(getMachineExcelExportUrl(machine._id));
-    notify("Excel dışa aktarma tamamlandı", "success");
-  } catch (error) {
-    notify("Excel dışa aktarma başarısız", "error");
-  } finally {
-    isExporting.value = false;
-  }
-}
-async function exportExcel() {
-  if (isExporting.value) return;
-
-  isExporting.value = true;
-
-  try {
-    downloadExcelFromUrl(getAllMachinesExcelExportUrl());
-    notify("Tüm makineler Excel'e aktarıldı", "success");
-  } catch (error) {
-    notify("Tüm makineler Excel'e aktarılamadı", "error");
-  } finally {
-    isExporting.value = false;
-  }
-}
-async function exportSelectedExcel() {
-  if (!selectedMachineIds.value.length) {
-    notify("Lütfen Excel'e aktarmak için en az bir makine seçin", "error");
-    return;
-  }
-
-  if (isExporting.value) return;
-
-  isExporting.value = true;
-
-  try {
-    downloadExcelFromUrl(
-      getSelectedMachinesExcelExportUrl(selectedMachineIds.value)
-    );
-    notify("Seçilen makineler Excel'e aktarıldı", "success");
-  } catch (error) {
-    notify("Seçilen makineler Excel'e aktarılamadı", "error");
-  } finally {
-    isExporting.value = false;
-  }
-}
-async function importExcel(event) {
-  const file = event.target.files?.[0];
-  if (!file) return;
-
-  if (isImporting.value) return;
-
-  isImporting.value = true;
-
-  try {
-    await importMachinesExcelRequest(file);
-    await fetchPowers();
-    await fetchMachines();
-    event.target.value = "";
-    notify("Excel içe aktarma tamamlandı", "success");
-  } catch (error) {
-    notify(
-      error?.response?.data?.message || "Excel içe aktarma başarısız",
-      "error"
-    );
-  } finally {
-    isImporting.value = false;
-  }
-}
   function clearFilters() {
     modelSearch.value = "";
     powerFilter.value = "";

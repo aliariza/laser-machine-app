@@ -153,12 +153,13 @@
 
 <script setup>
 import { Moon, Sun } from "lucide-vue-next";
-import { onMounted, ref } from "vue";
+import { onMounted } from "vue";
 import MachineFilters from "../components/machine/MachineFilters.vue";
 import MachinePagination from "../components/machine/MachinePagination.vue";
 import MachineTable from "../components/machine/MachineTable.vue";
 import MachineFormCard from "../components/machine/MachineFormCard.vue";
 import ConfirmDialog from "../components/ui/ConfirmDialog.vue";
+import { useTheme } from "../composables/useTheme";
 import ToastMessage from "../components/ui/ToastMessage.vue";
 import { useMachinePage } from "../composables/useMachinePage";
 import { useToast } from "../composables/useToast";
@@ -199,8 +200,6 @@ const {
   goToPage,
   goToNextPage,
   goToPreviousPage,
-  fetchPowers,
-  fetchMachines,
   addPower,
   deleteSelectedPower,
   saveMachine,
@@ -226,22 +225,9 @@ const {
   confirmDialogAction,
 } = useMachinePage(showToast);
 
-const theme = ref("light");
-
-function applyTheme(nextTheme) {
-  theme.value = nextTheme;
-  document.documentElement.dataset.theme = nextTheme;
-  window.localStorage.setItem("laser-theme", nextTheme);
-}
-
-function toggleTheme() {
-  applyTheme(theme.value === "dark" ? "light" : "dark");
-}
+const { theme, toggleTheme } = useTheme();
 
 onMounted(async () => {
-  const savedTheme = window.localStorage.getItem("laser-theme");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  applyTheme(savedTheme || (prefersDark ? "dark" : "light"));
   await loadInitialData();
 });
 </script>
