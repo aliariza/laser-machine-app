@@ -126,6 +126,7 @@ function removeSpecification(index) {
   flex-direction: column;
   gap: 14px;
   padding-top: 4px;
+  container-type: inline-size;
 }
 
 .specs-header {
@@ -150,9 +151,13 @@ function removeSpecification(index) {
 
 .spec-row {
   display: grid;
-  grid-template-columns: 1fr 1fr auto;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr) auto;
   gap: 12px;
   align-items: center;
+}
+
+.spec-row > * {
+  min-width: 0;
 }
 
 .spec-row-actions {
@@ -232,7 +237,7 @@ button {
   border-color: var(--danger-strong);
 }
 
-@media (max-width: 1100px) {
+@container (max-width: 560px) {
   .spec-row {
     grid-template-columns: 1fr;
   }
@@ -242,7 +247,7 @@ button {
   }
 }
 
-@media (max-width: 700px) {
+@container (max-width: 420px) {
   .subsection-copy {
     font-size: 12px;
   }
