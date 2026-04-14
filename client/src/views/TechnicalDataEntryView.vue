@@ -139,6 +139,15 @@
       :message="toastMessage"
       :type="toastType"
     />
+    <ConfirmDialog
+      :visible="confirmDialogVisible"
+      :title="confirmDialogTitle"
+      :message="confirmDialogMessage"
+      :confirm-text="confirmDialogConfirmText"
+      :cancel-text="confirmDialogCancelText"
+      @cancel="closeConfirmDialog"
+      @confirm="confirmDialogAction"
+    />
   </div>
 </template>
 
@@ -149,6 +158,7 @@ import MachineFilters from "../components/machine/MachineFilters.vue";
 import MachinePagination from "../components/machine/MachinePagination.vue";
 import MachineTable from "../components/machine/MachineTable.vue";
 import MachineFormCard from "../components/machine/MachineFormCard.vue";
+import ConfirmDialog from "../components/ui/ConfirmDialog.vue";
 import ToastMessage from "../components/ui/ToastMessage.vue";
 import { useMachinePage } from "../composables/useMachinePage";
 import { useToast } from "../composables/useToast";
@@ -207,6 +217,13 @@ const {
   isLoadingInitialData,
   isBackendConnected,
   backendMessage,
+  confirmDialogVisible,
+  confirmDialogTitle,
+  confirmDialogMessage,
+  confirmDialogConfirmText,
+  confirmDialogCancelText,
+  closeConfirmDialog,
+  confirmDialogAction,
 } = useMachinePage(showToast);
 
 const theme = ref("light");

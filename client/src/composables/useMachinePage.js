@@ -45,6 +45,12 @@ export function useMachinePage(showToast = null) {
   const isLoadingInitialData = ref(false);
   const isBackendConnected = ref(true);
   const backendMessage = ref("");
+  const confirmDialogVisible = ref(false);
+  const confirmDialogTitle = ref("");
+  const confirmDialogMessage = ref("");
+  const confirmDialogConfirmText = ref("Sil");
+  const confirmDialogCancelText = ref("İptal");
+  const pendingConfirmAction = ref(null);
 
   const defaultForm = () => ({
     powerId: "",
@@ -219,7 +225,42 @@ export function useMachinePage(showToast = null) {
   function setBackendUnavailable() {
     isBackendConnected.value = false;
     backendMessage.value =
-      "Backend not connected yet. The interface is live, but saving and loading records will work after the API is deployed.";
+      "Arayüz hazır, ancak kayıtları görmek ve kaydetmek için sunucu bağlantısının kurulması gerekiyor.";
+  }
+
+  function openConfirmDialog(
+    {
+      title = "Onay Gerekli",
+      message = "",
+      confirmText = "Sil",
+      cancelText = "İptal",
+    },
+    onConfirm
+  ) {
+    confirmDialogTitle.value = title;
+    confirmDialogMessage.value = message;
+    confirmDialogConfirmText.value = confirmText;
+    confirmDialogCancelText.value = cancelText;
+    pendingConfirmAction.value = onConfirm;
+    confirmDialogVisible.value = true;
+  }
+
+  function closeConfirmDialog() {
+    confirmDialogVisible.value = false;
+    confirmDialogTitle.value = "";
+    confirmDialogMessage.value = "";
+    confirmDialogConfirmText.value = "Sil";
+    confirmDialogCancelText.value = "İptal";
+    pendingConfirmAction.value = null;
+  }
+
+  async function confirmDialogAction() {
+    const action = pendingConfirmAction.value;
+    closeConfirmDialog();
+
+    if (typeof action === "function") {
+      await action();
+    }
   }
 
   async function loadInitialData() {
@@ -233,7 +274,7 @@ export function useMachinePage(showToast = null) {
       powers.value = [];
       machines.value = [];
       setBackendUnavailable();
-      notify("Backend not connected yet", "info");
+      notify("Sunucuya bağlanılamadı", "info");
     } finally {
       isLoadingInitialData.value = false;
     }
@@ -261,20 +302,24 @@ async function deleteSelectedPower() {
 
   const selectedPower = powers.value.find((power) => power._id === form.powerId);
   const powerName = selectedPower?.name || "Seçili güç";
-  const confirmed = window.confirm(
-    `${powerName} silinecek. Emin misiniz?\nBu işlemin geri dönüşü yoktur.`
+  openConfirmDialog(
+    {
+      title: "Güç Silinecek",
+      message: `${powerName} silinecek. Emin misiniz?\nBu işlemin geri dönüşü yoktur.`,
+      confirmText: "Sil",
+      cancelText: "İptal",
+    },
+    async () => {
+      try {
+        await deletePowerRequest(form.powerId);
+        form.powerId = "";
+        await fetchPowers();
+        notify("Güç silindi", "success");
+      } catch (error) {
+        notify(error?.response?.data?.message || "Güç silinemedi", "error");
+      }
+    }
   );
-
-  if (!confirmed) return;
-
-  try {
-    await deletePowerRequest(form.powerId);
-    form.powerId = "";
-    await fetchPowers();
-    notify("Güç silindi", "success");
-  } catch (error) {
-    notify(error?.response?.data?.message || "Güç silinemedi", "error");
-  }
 }
 
 async function saveMachine() {
@@ -326,24 +371,31 @@ async function deleteMachine(machine) {
     return;
   }
 
-  const confirmed = window.confirm(buildDeleteMessage(machine));
-  if (!confirmed) return;
+  openConfirmDialog(
+    {
+      title: "Makine Silinecek",
+      message: buildDeleteMessage(machine),
+      confirmText: "Sil",
+      cancelText: "İptal",
+    },
+    async () => {
+      isDeleting.value = true;
 
-  isDeleting.value = true;
-
-  try {
-    await deleteMachineRequest(machine._id);
-    selectedMachineIds.value = selectedMachineIds.value.filter(
-      (id) => id !== machine._id
-    );
-    await fetchMachines();
-    await fetchPowers();
-    notify("Makine silindi", "success");
-  } catch (error) {
-    notify(error?.response?.data?.message || "Makine silinemedi", "error");
-  } finally {
-    isDeleting.value = false;
-  }
+      try {
+        await deleteMachineRequest(machine._id);
+        selectedMachineIds.value = selectedMachineIds.value.filter(
+          (id) => id !== machine._id
+        );
+        await fetchMachines();
+        await fetchPowers();
+        notify("Makine silindi", "success");
+      } catch (error) {
+        notify(error?.response?.data?.message || "Makine silinemedi", "error");
+      } finally {
+        isDeleting.value = false;
+      }
+    }
+  );
 }  function buildExportFileName(machine) {
     const safePower = (machine?.powerId?.name || "")
       .trim()
@@ -511,5 +563,12 @@ async function importExcel(event) {
     isLoadingInitialData,
     isBackendConnected,
     backendMessage,
+    confirmDialogVisible,
+    confirmDialogTitle,
+    confirmDialogMessage,
+    confirmDialogConfirmText,
+    confirmDialogCancelText,
+    closeConfirmDialog,
+    confirmDialogAction,
   };
 }
