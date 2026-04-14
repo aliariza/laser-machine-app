@@ -23,6 +23,12 @@ Create a production build:
 npm run build
 ```
 
+Run the client component tests:
+
+```bash
+npm test
+```
+
 Preview the production build:
 
 ```bash

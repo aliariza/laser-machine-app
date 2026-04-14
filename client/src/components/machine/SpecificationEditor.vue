@@ -14,41 +14,39 @@
       :key="index"
       class="spec-row"
     >
-      <input
-        v-model="spec.key"
-        type="text"
+      <BaseInput
+        :model-value="spec.key"
         placeholder="Özellik adı"
         :ref="(el) => setSpecKeyRef(el, index)"
-        @input="emitUpdate"
+        @update:modelValue="updateSpecificationKey(index, $event)"
       />
 
-      <input
-        v-model="spec.value"
-        type="text"
+      <BaseInput
+        :model-value="spec.value"
         placeholder="Değer"
-        @input="emitUpdate"
+        @update:modelValue="updateSpecificationValue(index, $event)"
       />
 
       <div class="spec-row-actions">
-        <button
-          type="button"
-          class="secondary form-icon-btn"
+        <IconButton
+          variant="secondary"
+          size="md"
           @click="addSpecificationAfter(index)"
           title="Alt satır ekle"
           aria-label="Alt satır ekle"
         >
           <Plus :size="16" />
-        </button>
+        </IconButton>
 
-        <button
-          type="button"
-          class="danger form-icon-btn"
+        <IconButton
+          variant="danger"
+          size="md"
           @click="removeSpecification(index)"
           title="Sil"
           aria-label="Satırı sil"
         >
           <Trash2 :size="16" />
-        </button>
+        </IconButton>
       </div>
     </div>
   </div>
@@ -57,6 +55,8 @@
 <script setup>
 import { nextTick, ref, watch } from "vue";
 import { Plus, Trash2 } from "lucide-vue-next";
+import BaseInput from "../ui/BaseInput.vue";
+import IconButton from "../ui/IconButton.vue";
 
 const props = defineProps({
   specifications: {
@@ -94,9 +94,22 @@ function emitUpdate() {
 }
 
 function setSpecKeyRef(el, index) {
-  if (el) {
-    specKeyRefs.value[index] = el;
+  const inputElement =
+    typeof el?.focus === "function" ? el : el?.$el ?? el;
+
+  if (inputElement) {
+    specKeyRefs.value[index] = inputElement;
   }
+}
+
+function updateSpecificationKey(index, value) {
+  localSpecifications.value[index].key = value;
+  emitUpdate();
+}
+
+function updateSpecificationValue(index, value) {
+  localSpecifications.value[index].value = value;
+  emitUpdate();
 }
 
 async function addSpecificationAfter(index) {
@@ -163,80 +176,8 @@ function removeSpecification(index) {
 }
 
 .spec-row-actions {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-input {
-  width: 100%;
-  height: 44px;
-  padding: 0 14px;
-  border-radius: 12px;
-  border: 1px solid var(--border-soft);
-  background: var(--bg-input);
-  color: var(--text-primary);
-  font-size: 14px;
-  transition: all 0.18s ease;
-  box-sizing: border-box;
-}
-
-input::placeholder {
-  color: var(--text-muted);
-}
-
-input:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-focus);
-}
-
-button {
-  font: inherit;
-  height: 44px;
-  border-radius: 12px;
-  border: 1px solid transparent;
-  padding: 0 16px;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.18s ease;
-  white-space: nowrap;
-}
-
-.form-icon-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   gap: 8px;
-}
-
-.form-icon-btn svg {
-  flex: 0 0 auto;
-  stroke-width: 2;
-}
-
-.secondary {
-  background: var(--bg-muted);
-  color: var(--text-secondary);
-  border-color: var(--border-soft);
-}
-
-.secondary:hover {
-  background: var(--bg-hover);
-}
-
-.danger {
-  background: var(--danger);
-  color: var(--text-inverse);
-  border-color: var(--danger);
-}
-
-.danger:hover {
-  background: var(--danger-strong);
-  border-color: var(--danger-strong);
 }
 
 @container (max-width: 560px) {
@@ -250,18 +191,16 @@ button {
     gap: 10px;
   }
 
-  .spec-row-actions button {
+  .spec-row-actions :deep(.base-button) {
     width: 40px;
     min-width: 40px;
-    padding: 0;
-    border-radius: 10px;
   }
 
-  .spec-row-actions .secondary {
+  .spec-row-actions :deep(.base-button--secondary) {
     background: var(--bg-glass);
   }
 
-  .spec-row-actions .danger {
+  .spec-row-actions :deep(.base-button--danger) {
     background: #dc624d;
     border-color: #dc624d;
   }

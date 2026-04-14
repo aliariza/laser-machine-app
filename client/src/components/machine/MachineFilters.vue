@@ -1,61 +1,26 @@
 <template>
   <div class="machine-filters">
-    <div class="list-toolbar">
-      <div class="toolbar-field toolbar-search">
-        <input
-          :value="modelSearch"
-          type="text"
-          placeholder="Model veya anahtar kelime ara..."
-          @input="emit('update:modelSearch', $event.target.value)"
-        />
-      </div>
+    <MachineFilterToolbar
+      :powers="powers"
+      :model-search="modelSearch"
+      :power-filter="powerFilter"
+      :machine-type-filter="machineTypeFilter"
+      @update:modelSearch="emit('update:modelSearch', $event)"
+      @update:powerFilter="emit('update:powerFilter', $event)"
+      @update:machineTypeFilter="emit('update:machineTypeFilter', $event)"
+      @clear="emit('clear')"
+    />
 
-      <div class="toolbar-field">
-        <select
-          :value="powerFilter"
-          @change="emit('update:powerFilter', $event.target.value)"
-        >
-          <option value="">Tüm Güçler</option>
-          <option v-for="power in powers" :key="power._id" :value="power._id">
-            {{ power.name }}
-          </option>
-        </select>
-      </div>
-
-      <div class="toolbar-field">
-        <select
-          :value="machineTypeFilter"
-          @change="emit('update:machineTypeFilter', $event.target.value)"
-        >
-          <option value="">Tüm Makine Tipleri</option>
-          <option value="Açık Kasa">Açık Kasa</option>
-          <option value="Kapalı Kasa">Kapalı Kasa</option>
-        </select>
-      </div>
-
-      <div class="toolbar-actions">
-        <BaseButton type="button" variant="secondary" size="md" @click="emit('clear')">
-          Filtreleri Temizle
-        </BaseButton>
-      </div>
-    </div>
-
-    <div class="list-summary">
-      <div class="summary-pill">
-        Toplam: <strong>{{ totalCount }}</strong>
-      </div>
-      <div class="summary-pill">
-        Filtrelenen: <strong>{{ filteredCount }}</strong>
-      </div>
-      <div class="summary-note">
-        Sonucu daraltmak için model, güç veya makine tipi seçin.
-      </div>
-    </div>
+    <MachineFilterSummary
+      :total-count="totalCount"
+      :filtered-count="filteredCount"
+    />
   </div>
 </template>
 
 <script setup>
-import BaseButton from "../ui/BaseButton.vue";
+import MachineFilterSummary from "./MachineFilterSummary.vue";
+import MachineFilterToolbar from "./MachineFilterToolbar.vue";
 
 defineProps({
   powers: {
@@ -91,120 +56,3 @@ const emit = defineEmits([
   "clear",
 ]);
 </script>
-
-<style scoped>
-.list-toolbar {
-  display: grid;
-  grid-template-columns: minmax(220px, 1.5fr) 150px 170px auto;
-  gap: 12px;
-  align-items: center;
-  margin-bottom: 16px;
-}
-
-.toolbar-field {
-  display: flex;
-}
-
-.toolbar-field input,
-.toolbar-field select {
-  width: 100%;
-  height: 44px;
-  padding: 0 14px;
-  border-radius: 12px;
-  border: 1px solid var(--border-soft);
-  background: var(--bg-input-soft);
-  color: var(--text-primary);
-  font-size: 13px;
-  transition: all 0.18s ease;
-  box-sizing: border-box;
-}
-
-.toolbar-field input::placeholder {
-  color: var(--text-muted);
-}
-
-.toolbar-field input:focus,
-.toolbar-field select:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-focus);
-}
-
-.toolbar-actions {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.toolbar-actions :deep(.base-button) {
-  height: 44px;
-  padding: 0 14px;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.list-summary {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 14px;
-  align-items: center;
-}
-
-.summary-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 9px 14px;
-  border-radius: 999px;
-  background: var(--bg-accent-soft);
-  border: 1px solid var(--border-accent);
-  color: var(--text-secondary);
-  font-size: 12.5px;
-  font-weight: 600;
-}
-
-.summary-pill strong {
-  color: var(--text-primary);
-  font-weight: 700;
-}
-
-.summary-note {
-  color: var(--text-muted);
-  font-size: 12.5px;
-  font-weight: 600;
-}
-
-@media (max-width: 1100px) {
-  .list-toolbar {
-    grid-template-columns: 1fr;
-  }
-
-  .toolbar-actions {
-    justify-content: flex-start;
-  }
-}
-
-@media (max-width: 700px) {
-  .list-toolbar {
-    gap: 10px;
-    margin-bottom: 14px;
-  }
-
-  .toolbar-field input,
-  .toolbar-field select {
-    height: 42px;
-    font-size: 12.5px;
-  }
-
-  .toolbar-actions :deep(.base-button) {
-    height: 42px;
-    font-size: 12.5px;
-    width: 100%;
-  }
-
-  .summary-note {
-    width: 100%;
-    line-height: 1.45;
-  }
-}
-</style>

@@ -11,84 +11,23 @@
 
     <form class="machine-form" @submit.prevent="$emit('save')">
       <div class="grid">
-        <div class="field field-wide">
-          <label>Güç</label>
-          <div class="inline-row">
-            <select :value="form.powerId" required @change="updateField('powerId', $event.target.value)">
-              <option value="">Güç seçiniz</option>
-              <option v-for="power in powers" :key="power._id" :value="power._id">
-                {{ power.name }}
-              </option>
-            </select>
+        <PowerFieldRow
+          :powers="powers"
+          :power-id="form.powerId"
+          :new-power-name="newPowerName"
+          @update:powerId="updateField('powerId', $event)"
+          @update:newPowerName="$emit('update:newPowerName', $event)"
+          @add-power="$emit('add-power')"
+          @delete-selected-power="$emit('delete-selected-power')"
+        />
 
-            <input
-              :value="newPowerName"
-              type="text"
-              placeholder="Yeni güç ekle"
-              @input="$emit('update:newPowerName', $event.target.value)"
-            />
-
-            <IconButton
-              variant="secondary"
-              size="md"
-              class="form-icon-btn"
-              @click="$emit('add-power')"
-              title="Güç Ekle"
-            >
-              <Plus :size="16" />
-            </IconButton>
-
-            <IconButton
-              variant="danger"
-              size="md"
-              class="form-icon-btn"
-              @click="$emit('delete-selected-power')"
-              title="Seçileni Sil"
-            >
-              <Trash2 :size="16" />
-            </IconButton>
-          </div>
-        </div>
-
-        <div class="field">
-          <label>Tabla Tipi</label>
-          <select :value="form.tableType" required @change="updateField('tableType', $event.target.value)">
-            <option value="">Tabla tipi seçiniz</option>
-            <option value="Tek Tabla">Tek Tabla</option>
-            <option value="Çift Tabla">Çift Tabla</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label>Makine Tipi</label>
-          <select :value="form.machineType" required @change="updateField('machineType', $event.target.value)">
-            <option value="">Makine tipi seçiniz</option>
-            <option value="Açık Kasa">Açık Kasa</option>
-            <option value="Kapalı Kasa">Kapalı Kasa</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label>Model</label>
-          <input
-            :value="form.model"
-            type="text"
-            placeholder="Model giriniz"
-            required
-            @input="updateField('model', $event.target.value)"
-          />
-        </div>
-
-        <div class="field">
-          <label>Resim Yolu</label>
-          <input
-            :value="form.imagePath"
-            type="text"
-            placeholder="uploads/fs3015.png"
-            @input="updateField('imagePath', $event.target.value)"
-          />
-          <small class="field-hint">Opsiyonel. Yalnızca görsel dosya yolunuz varsa doldurun.</small>
-        </div>
+        <MachineBasicFields
+          :form="form"
+          @update:tableType="updateField('tableType', $event)"
+          @update:machineType="updateField('machineType', $event)"
+          @update:model="updateField('model', $event)"
+          @update:imagePath="updateField('imagePath', $event)"
+        />
       </div>
 
       <SpecificationEditor
@@ -96,77 +35,24 @@
         @update:specifications="updateSpecifications"
       />
 
-      <div class="actions">
-        <div class="action-group action-group-primary">
-          <BaseButton
-            type="submit"
-            variant="primary"
-            size="md"
-            class="form-icon-btn"
-            :title="editingMachineId ? 'Güncelle' : 'Kaydet'"
-            :disabled="isSaving"
-          >
-            <Save :size="16" />
-            <span>{{ isSaving ? "Kaydediliyor..." : editingMachineId ? "Güncelle" : "Kaydet" }}</span>
-          </BaseButton>
-
-          <BaseButton
-            variant="secondary"
-            size="md"
-            class="form-icon-btn"
-            @click="$emit('reset')"
-            title="Formu Temizle"
-            :disabled="isSaving"
-          >
-            <RotateCcw :size="16" />
-            <span>Formu Temizle</span>
-          </BaseButton>
-        </div>
-
-        <div class="action-group">
-          <BaseButton
-            variant="secondary"
-            size="md"
-            class="form-icon-btn"
-            @click="$emit('export-all')"
-            title="Tüm Listeyi Excel'e Aktar"
-            :disabled="isExporting"
-          >
-            <FileSpreadsheet :size="16" />
-            <span>{{ isExporting ? "Aktarılıyor..." : "Tüm Listeyi Aktar" }}</span>
-          </BaseButton>
-
-          <BaseButton
-            variant="secondary"
-            size="md"
-            class="form-icon-btn"
-            @click="$emit('export-selected')"
-            title="Seçili Kayıtları Excel'e Aktar"
-            :disabled="isExporting"
-          >
-            <Download :size="16" />
-            <span>{{ isExporting ? "Aktarılıyor..." : "Seçili Kayıtları Aktar" }}</span>
-          </BaseButton>
-
-          <label
-            class="upload-button secondary form-icon-btn"
-            title="Excel'den Toplu İçe Aktar"
-            :class="{ disabled: isImporting }"
-          >
-            <Upload :size="16" />
-            <span>{{ isImporting ? "İçe Aktarılıyor..." : "Excel'den İçe Aktar" }}</span>
-            <input type="file" accept=".xlsx" @change="$emit('import', $event)" hidden :disabled="isImporting" />
-          </label>
-        </div>
-      </div>
+      <MachineFormActions
+        :editing-machine-id="editingMachineId"
+        :is-saving="isSaving"
+        :is-exporting="isExporting"
+        :is-importing="isImporting"
+        @reset="$emit('reset')"
+        @export-all="$emit('export-all')"
+        @export-selected="$emit('export-selected')"
+        @import="$emit('import', $event)"
+      />
     </form>
   </div>
 </template>
 
 <script setup>
-import { Download, FileSpreadsheet, Plus, RotateCcw, Save, Trash2, Upload } from "lucide-vue-next";
-import BaseButton from "../ui/BaseButton.vue";
-import IconButton from "../ui/IconButton.vue";
+import MachineBasicFields from "./MachineBasicFields.vue";
+import MachineFormActions from "./MachineFormActions.vue";
+import PowerFieldRow from "./PowerFieldRow.vue";
 import SpecificationEditor from "./SpecificationEditor.vue";
 
 const props = defineProps({
@@ -272,140 +158,9 @@ function updateSpecifications(specifications) {
   gap: 18px;
 }
 
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.field-wide {
-  grid-column: 1 / -1;
-}
-
-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-secondary);
-}
-
-.field-hint {
-  margin-top: -2px;
-  color: var(--text-muted);
-  font-size: 12px;
-  line-height: 1.45;
-}
-
-.inline-row {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-input,
-select,
-.upload-button {
-  font: inherit;
-}
-
-input,
-select {
-  width: 100%;
-  height: 44px;
-  padding: 0 14px;
-  border-radius: 12px;
-  border: 1px solid var(--border-soft);
-  background: var(--bg-input);
-  color: var(--text-primary);
-  font-size: 14px;
-  transition: all 0.18s ease;
-  box-sizing: border-box;
-}
-
-input::placeholder {
-  color: var(--text-muted);
-}
-
-input:focus,
-select:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-focus);
-}
-
-.upload-button {
-  height: 44px;
-  border-radius: 12px;
-  border: 1px solid transparent;
-  padding: 0 16px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.18s ease;
-  white-space: nowrap;
-}
-
-.form-icon-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-.form-icon-btn span {
-  display: inline-block;
-}
-.form-icon-btn :deep(svg) {
-  flex: 0 0 auto;
-}
-
-.upload-button.disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.upload-button.secondary {
-  background: var(--bg-muted);
-  color: var(--text-secondary);
-  border-color: var(--border-soft);
-}
-
-.upload-button.secondary:hover {
-  background: var(--bg-hover);
-}
-
-.actions {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding-top: 4px;
-}
-
-.action-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-}
-
-.action-group-primary {
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--border-soft);
-}
-
 @media (max-width: 1100px) {
   .grid {
     grid-template-columns: 1fr;
-  }
-
-  .field-wide {
-    grid-column: auto;
-  }
-
-  .inline-row {
-    flex-direction: column;
-    align-items: stretch;
   }
 }
 
@@ -422,25 +177,6 @@ select:focus {
 
   .section-copy {
     font-size: 12.5px;
-  }
-
-  .field-hint {
-    font-size: 11.5px;
-  }
-
-  .action-group {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .actions {
-    gap: 12px;
-  }
-
-  .actions .form-icon-btn,
-  .upload-button {
-    width: 100%;
-    justify-content: center;
   }
 }
 </style>

@@ -106,6 +106,7 @@ npm test
 
 This runs:
 - server tests
+- client component tests
 - client production build
 
 You can also run them separately:
@@ -119,6 +120,7 @@ Or directly:
 
 ```bash
 cd server && npm test
+cd client && npm test
 cd client && npm run build
 ```
 
