@@ -6,6 +6,11 @@ client/.env
 server/node_modules
 client/node_modules
 client/dist
+tmp/
+output/*
+!output/pdf/
+output/pdf/*
+!output/pdf/laser-machine-app-summary.pdf
 
 # OS/editor files
 .DS_Store
