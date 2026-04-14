@@ -60,31 +60,31 @@
 
 :root[data-theme="dark"] {
   --bg-canvas: #0f1715;
-  --bg-surface: rgba(18, 26, 24, 0.84);
-  --bg-surface-strong: #16201d;
-  --bg-muted: #1b2623;
+  --bg-surface: rgba(18, 26, 24, 0.94);
+  --bg-surface-strong: #17211f;
+  --bg-muted: #1d2926;
   --bg-accent-soft: rgba(40, 89, 72, 0.32);
   --bg-accent-strong: #59a487;
   --bg-warm-soft: rgba(90, 57, 32, 0.25);
-  --bg-input: rgba(24, 34, 31, 0.92);
-  --bg-input-soft: rgba(24, 34, 31, 0.86);
-  --bg-glass: rgba(22, 31, 29, 0.8);
-  --bg-glass-soft: rgba(22, 31, 29, 0.72);
-  --bg-hover: #23302c;
-  --bg-table-row: rgba(20, 29, 27, 0.9);
-  --bg-table-row-hover: rgba(31, 43, 39, 0.96);
-  --bg-checkbox: rgba(18, 26, 24, 0.95);
+  --bg-input: rgba(25, 36, 33, 0.98);
+  --bg-input-soft: rgba(24, 35, 32, 0.95);
+  --bg-glass: rgba(24, 35, 32, 0.94);
+  --bg-glass-soft: rgba(24, 35, 32, 0.9);
+  --bg-hover: #283632;
+  --bg-table-row: rgba(21, 31, 28, 0.96);
+  --bg-table-row-hover: rgba(31, 43, 39, 0.99);
+  --bg-checkbox: rgba(21, 31, 28, 0.98);
   --checkbox-check: #eaf5f1;
   --checkbox-border: rgba(193, 221, 209, 0.28);
 
   --text-primary: #e6f1ec;
-  --text-secondary: #afc3ba;
-  --text-muted: #7b9288;
+  --text-secondary: #c3d4cd;
+  --text-muted: #99aca4;
   --text-inverse: #0f1715;
 
-  --border-soft: rgba(216, 233, 226, 0.1);
-  --border-medium: rgba(216, 233, 226, 0.16);
-  --border-accent: rgba(89, 164, 135, 0.28);
+  --border-soft: rgba(216, 233, 226, 0.14);
+  --border-medium: rgba(216, 233, 226, 0.2);
+  --border-accent: rgba(104, 188, 154, 0.34);
 
   --accent: #59a487;
   --accent-strong: #83c8ad;
@@ -107,8 +107,8 @@
   --badge-machine-bg: rgba(176, 112, 60, 0.3);
   --badge-machine-text: #ffd4aa;
 
-  --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.34);
-  --shadow-card: 0 18px 46px rgba(0, 0, 0, 0.28);
+  --shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.26);
+  --shadow-card: 0 16px 36px rgba(0, 0, 0, 0.22);
   color-scheme: dark;
 }
 
@@ -137,6 +137,7 @@ body {
   margin: 0;
   min-width: 320px;
   color: var(--text-primary);
+  background-color: var(--bg-canvas);
   transition: color 0.25s ease, background-color 0.25s ease;
 }
 
