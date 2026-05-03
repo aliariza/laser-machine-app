@@ -1,0 +1,8554 @@
+[{
+  "_id": {
+    "$oid": "69d8047f7961c8750c9fb0fb"
+  },
+  "powerId": {
+    "$oid": "69d6f6a2a96d2d7d613d4fa2"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS4015",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "3KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "4100 x 1530 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "1200 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "5720 x 2367 x 1920 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "1300 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "3200 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "100 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "25.02KVA/44.7A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-09T19:56:47.580Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T01:51:44.739Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d85ad97961c8750c9fb12d"
+  },
+  "powerId": {
+    "$oid": "69d6f6a2a96d2d7d613d4fa2"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS3015",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "3KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "3100 x 1530 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "900 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "4720 x 2367 x 1920mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "1000 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "2800 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "100 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "25.02KVA/44.7A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:05:13.373Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T02:05:13.373Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d85c067961c8750c9fb134"
+  },
+  "powerId": {
+    "$oid": "69d6f6a2a96d2d7d613d4fa2"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS4020",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "3KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "4100 x 2030 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "1600 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "5720 x 3200 x 1920 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "1500 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "3400 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "100 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "26.14KVA/46.8A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:10:14.668Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T02:10:14.668Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d85d177961c8750c9fb13b"
+  },
+  "powerId": {
+    "$oid": "69d6f6a2a96d2d7d613d4fa2"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS6015",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "3KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "6100 x 1530 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "1800 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "8260 x 2367 x 1920 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "1900 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "4500 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "100 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "25.02KVA/44.7A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:14:47.999Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T02:14:47.999Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d85e4a7961c8750c9fb142"
+  },
+  "powerId": {
+    "$oid": "69d6f6a2a96d2d7d613d4fa2"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS6020",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "3KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "6100 x 2030 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "2500 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "8260 x 3200 x 2100 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "2000 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "5500 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "100 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "26.14KVA/46.8A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:19:54.708Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T02:19:54.708Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d85eff7961c8750c9fb149"
+  },
+  "powerId": {
+    "$oid": "69d6f6a2a96d2d7d613d4fa2"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS6025",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "3KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "6100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "2950 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "8260 x 3836 x 2100 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "2200 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "6000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "150 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "27.14KVA/48.5A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:22:55.364Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T02:22:55.364Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d85f877961c8750c9fb150"
+  },
+  "powerId": {
+    "$oid": "69d6f6a2a96d2d7d613d4fa2"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS8025",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "3KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "8100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "2950 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "11260 x 3836 x 2100 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "4000 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "7000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "150 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "27.14KVA/48.5A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:25:11.872Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T02:25:11.872Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d8600f7961c8750c9fb157"
+  },
+  "powerId": {
+    "$oid": "69d6f6e0a96d2d7d613d4fa9"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS3015",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "6KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "3100 x 1530 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "900 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "4720 x 2367 x 1920mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "1000 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "2800 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "100 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "45.64KVA/81.6A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:27:27.907Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T02:27:27.907Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d860707961c8750c9fb15e"
+  },
+  "powerId": {
+    "$oid": "69d6f6e0a96d2d7d613d4fa9"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS4015",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "6KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "4100 x 1530 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "1200 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "5720 x 2367 x 1920 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "1300 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "3200 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "100 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "45.64KVA/81.6A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:29:04.870Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T02:29:04.870Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d860c47961c8750c9fb165"
+  },
+  "powerId": {
+    "$oid": "69d6f6e0a96d2d7d613d4fa9"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS4020",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "6KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "4100 x 2030 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "1600 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "5720 x 3200 x 1920 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "1500 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "3400 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "100 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "46.76KVA/83.6A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:30:28.275Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T02:30:28.275Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d861277961c8750c9fb16c"
+  },
+  "powerId": {
+    "$oid": "69d6f6e0a96d2d7d613d4fa9"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS6015",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "6KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "6100 x 1530 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "1800 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "8260 x 2367 x 1920 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "1900 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "4500 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "100 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "45.64KVA/81.6A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:32:07.875Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T02:32:07.875Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d861867961c8750c9fb173"
+  },
+  "powerId": {
+    "$oid": "69d6f6e0a96d2d7d613d4fa9"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS6020",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "6KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "6100 x 2030 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "2500 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "8260 x 3200 x 2100 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "2000 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "5500 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "100 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "46.76KVA/83.6A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:33:42.153Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T02:33:42.153Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d861d17961c8750c9fb17a"
+  },
+  "powerId": {
+    "$oid": "69d6f6e0a96d2d7d613d4fa9"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS6025",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "6KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "6100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "2950 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "8260 x 3836 x 2100 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "2200 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "6000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "150 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "47.77KVA/85.4A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:34:57.162Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T05:33:30.113Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d862357961c8750c9fb181"
+  },
+  "powerId": {
+    "$oid": "69d6f6e0a96d2d7d613d4fa9"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS8025",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "6KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "8100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "2950 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "11260 x 3836 x 2100 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "4000 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "7000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "150 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "47.77KVA/85.4A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:36:37.052Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T02:36:37.052Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d8633a7961c8750c9fb18c"
+  },
+  "powerId": {
+    "$oid": "69d6f6e0a96d2d7d613d4fa9"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS12025",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "6KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "12100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "9500 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "14900 x 3750 x 2150 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "7500 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "14000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "150 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "47.77KVA/85.4A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:40:58.677Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T02:40:58.677Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d863bb7961c8750c9fb193"
+  },
+  "powerId": {
+    "$oid": "69d6f6e0a96d2d7d613d4fa9"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS13025",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "6KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "13100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "10500 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "15900 x 3750 x 2150 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "8500 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "16000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "150 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "47.77KVA/85.4A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:43:07.803Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T02:43:07.803Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d864b67961c8750c9fb19a"
+  },
+  "powerId": {
+    "$oid": "69d6f6eba96d2d7d613d4fad"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS6015",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "12KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "6100 x 1530 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "2800 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "8260 x 2367 x 1920 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "1900 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "4500 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "100 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "89.02KVA/159.2A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:47:18.252Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T05:09:30.117Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d8653d7961c8750c9fb1a1"
+  },
+  "powerId": {
+    "$oid": "69d6f6eba96d2d7d613d4fad"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS6020",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "12KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "6100 x 2030 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "3800 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "8260 x 3200 x 2100 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "2000 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "5500 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "100 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "89.02KVA/159.2A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:49:33.131Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T05:08:14.245Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d865a47961c8750c9fb1a8"
+  },
+  "powerId": {
+    "$oid": "69d6f6eba96d2d7d613d4fad"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS6025",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "12KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "6100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "4700 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "8260 x 3836 x 2100 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "2200 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "6000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "150 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "89.02KVA/159.2A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:51:16.420Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T05:06:40.873Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d866057961c8750c9fb1af"
+  },
+  "powerId": {
+    "$oid": "69d6f6eba96d2d7d613d4fad"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS8025",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "12KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "8100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "4700 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "11260 x 3836 x 2100 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "4000 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "7000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "150 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "89.02KVA/159.2A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:52:53.847Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T05:04:35.563Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d866a77961c8750c9fb1b6"
+  },
+  "powerId": {
+    "$oid": "69d6f6eba96d2d7d613d4fad"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS12025",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "12KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "12100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "9500 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "14900 x 3750 x 2150 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "7500 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "14000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "150 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "89.02KVA/159.2A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:55:35.217Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T05:03:45.452Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d866f67961c8750c9fb1bd"
+  },
+  "powerId": {
+    "$oid": "69d6f6eba96d2d7d613d4fad"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS13025",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "12KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "13100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "10500 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "15900 x 3750 x 2150 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "8500 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "16000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "150 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "89.02KVA/159.2A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T02:56:54.116Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T05:02:44.197Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d867f27961c8750c9fb1c8"
+  },
+  "powerId": {
+    "$oid": "69d6f6f4a96d2d7d613d4fb1"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS8025",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "20KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "8100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "4700 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "11260 x 3836 x 2100 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "4000 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "7000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "150 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "BOCİ"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "145.27/259..8"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:01:06.226Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T04:53:46.067Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d8688c7961c8750c9fb1cf"
+  },
+  "powerId": {
+    "$oid": "69d6f6f4a96d2d7d613d4fb1"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS12025",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "20KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "12100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "12000 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "14900 x 3750 x 2150 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "7500 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "14000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "150 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "BOCİ"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "145.27/259..8"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:03:40.315Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T04:52:23.032Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d869087961c8750c9fb1d6"
+  },
+  "powerId": {
+    "$oid": "69d6f6f4a96d2d7d613d4fb1"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS13025",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "20KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "13100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "13000 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "15900 x 3750 x 2150 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "8500 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "16000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "150 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "BOCİ"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "145.27/259..8"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:05:44.546Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T04:50:15.718Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d869777961c8750c9fb1dd"
+  },
+  "powerId": {
+    "$oid": "69d6f6fea96d2d7d613d4fb5"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS12025",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "30KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "12100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "12000 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "14900 x 3750 x 2150 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "7500 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "14000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "150 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "BOCİ"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "216.78/387.3"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:07:35.115Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T04:45:26.169Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d869fc7961c8750c9fb1e4"
+  },
+  "powerId": {
+    "$oid": "69d6f6fea96d2d7d613d4fb5"
+  },
+  "tableType": "Tek Tabla",
+  "machineType": "Açık Kasa",
+  "model": "FS13025",
+  "imagePath": "uploads/Picture1.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "30KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "13100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "13000 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "15900 x 3750 x 2150 mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "8500 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "16000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "150 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "BOCİ"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "216.78KVA/387.3A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:09:48.320Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T04:42:53.801Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d86f4e7961c8750c9fb1eb"
+  },
+  "powerId": {
+    "$oid": "69d6f6a2a96d2d7d613d4fa2"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC3015",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "3KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "3100 x 1530 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "130 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "700 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "8510 x 2240 x 2210mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "1265 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "4500 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "350 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "28.13KVA/50.3A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:32:30.049Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T03:32:30.049Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d870247961c8750c9fb1f2"
+  },
+  "powerId": {
+    "$oid": "69d6f6a2a96d2d7d613d4fa2"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC4020",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "3KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "4100 x 2030 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "1300 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "12750 x 3650 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "2005 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "6000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "350 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "28.75KVA/51.4A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:36:04.149Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T03:36:04.149Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d870dc7961c8750c9fb1f9"
+  },
+  "powerId": {
+    "$oid": "69d6f6a2a96d2d7d613d4fa2"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC6020",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "3KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "6100 x 2030 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "1900 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "14750 x 3650 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "3300 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "13000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "350 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "30.63KVA/54.8A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:39:08.087Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T03:39:08.087Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d871457961c8750c9fb200"
+  },
+  "powerId": {
+    "$oid": "69d6f6a2a96d2d7d613d4fa2"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC6025",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "3KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "6100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "2350 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "14750 x 4150 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "3500 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "15000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "350 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "30.63KVA/54.8A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:40:53.985Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T03:40:53.985Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d871d77961c8750c9fb207"
+  },
+  "powerId": {
+    "$oid": "69d6f6e0a96d2d7d613d4fa9"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC3015",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "6KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "3100 x 1530 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "130 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "900 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "8510 x 2240 x 2210mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "1265 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "4500 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "350 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "46.75KVA/83.6A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:43:19.352Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T03:43:19.352Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d872307961c8750c9fb20e"
+  },
+  "powerId": {
+    "$oid": "69d6f6e0a96d2d7d613d4fa9"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC4020",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "6KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "4100 x 2030 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "1300 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "12750 x 3650 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "2005 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "6000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "350 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "47.38KVA/84.7A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:44:48.016Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T03:44:48.016Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d872827961c8750c9fb215"
+  },
+  "powerId": {
+    "$oid": "69d6f6e0a96d2d7d613d4fa9"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC6020",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "6KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "6100 x 2030 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "1900 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "14750 x 3650 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "3300 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "13000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "350 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "49.25KVA/88.1A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:46:10.694Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T03:46:10.694Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d872e07961c8750c9fb21c"
+  },
+  "powerId": {
+    "$oid": "69d6f6e0a96d2d7d613d4fa9"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC6025",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "6KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "6100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "2350 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "14750 x 4150 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "3500 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "15000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "350 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "49.25KVA/88.1A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:47:44.869Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T03:47:44.869Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d873987961c8750c9fb223"
+  },
+  "powerId": {
+    "$oid": "69d6f6e0a96d2d7d613d4fa9"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC8025",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "6KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "8100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "3150 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "19050 x 4150 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "6000 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "21000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "350 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "53.63KVA/95.9A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:50:48.474Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T03:50:48.474Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d874237961c8750c9fb22a"
+  },
+  "powerId": {
+    "$oid": "69d6f6e0a96d2d7d613d4fa9"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC12025",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "6KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "12200 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "140 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "4682 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "27500 x 4150 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "9800 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "24500 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "400 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "59.25KVA/106A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:53:07.358Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T03:53:07.358Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d874957961c8750c9fb231"
+  },
+  "powerId": {
+    "$oid": "69d6f6eba96d2d7d613d4fad"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC4020",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "12KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "4100 x 2030 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "2500 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "12750 x 3650 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "2005 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "6000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "350 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "94.38KVA/168.8A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:55:01.708Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T03:55:01.708Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d875387961c8750c9fb238"
+  },
+  "powerId": {
+    "$oid": "69d6f6eba96d2d7d613d4fad"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC6020",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "12KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "6100 x 2030 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "3800 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "14750 x 3650 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "3300 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "13000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "350 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "94.38KVA/168.8A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:57:44.322Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T03:57:44.322Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d8759e7961c8750c9fb23f"
+  },
+  "powerId": {
+    "$oid": "69d6f6eba96d2d7d613d4fad"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC6025",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "12KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "6100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "4700 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "14750 x 4150 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "3500 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "15000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "350 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "94.38KVA/168.8A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T03:59:26.637Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T03:59:26.637Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d876177961c8750c9fb246"
+  },
+  "powerId": {
+    "$oid": "69d6f6eba96d2d7d613d4fad"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC8025",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "12KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "8100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "6300 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "19050 x 4150 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "6000 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "21000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "350 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "99.38KVA/177.7A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T04:01:27.583Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T04:01:27.583Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d876967961c8750c9fb24d"
+  },
+  "powerId": {
+    "$oid": "69d6f6eba96d2d7d613d4fad"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC12025",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "12KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "12200 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "140 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "9400 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "27500 x 4150 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "9800 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "24500 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "400 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "WSX/Raytools"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "103.75KVA/185.5A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T04:03:34.485Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T05:10:51.495Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d877127961c8750c9fb254"
+  },
+  "powerId": {
+    "$oid": "69d6f6f4a96d2d7d613d4fb1"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC4020",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "20KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "4100 x 2030 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "2500 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "12750 x 3650 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "2005 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "6000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "350 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "BOCİ"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "135.63KVA/242.5A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T04:05:38.148Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T04:05:38.148Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d877727961c8750c9fb25b"
+  },
+  "powerId": {
+    "$oid": "69d6f6f4a96d2d7d613d4fb1"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC6020",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "20KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "6100 x 2030 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "3800 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "14750 x 3650 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "3300 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "13000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "350 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "BOCİ"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "135.63KVA/242.5A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T04:07:14.889Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T04:07:14.889Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d877d17961c8750c9fb262"
+  },
+  "powerId": {
+    "$oid": "69d6f6f4a96d2d7d613d4fb1"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC6025",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "20KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "6100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "4700 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "14750 x 4150 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "3500 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "15000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "350 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "BOCİ"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "94.38KVA/168.8A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T04:08:49.124Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T04:08:49.124Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d878267961c8750c9fb269"
+  },
+  "powerId": {
+    "$oid": "69d6f6f4a96d2d7d613d4fb1"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC8025",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "20KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "8100 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "100 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "6300 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "19050 x 4150 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "6000 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "21000 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "350 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "BOCİ"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "136.88KVA/244.8A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T04:10:14.759Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T04:10:14.759Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d878867961c8750c9fb270"
+  },
+  "powerId": {
+    "$oid": "69d6f6f4a96d2d7d613d4fb1"
+  },
+  "tableType": "Çift Tabla",
+  "machineType": "Kapalı Kasa",
+  "model": "FC12025",
+  "imagePath": "uploads/Picture2.png",
+  "specifications": [
+    {
+      "key": "Lazer Gücü",
+      "value": "20KW"
+    },
+    {
+      "key": "Çalışma Alanı",
+      "value": "12200 x 2550 mm"
+    },
+    {
+      "key": "Oto Gaz Basınç Ayarı",
+      "value": "Oksijen, Azot, Hava"
+    },
+    {
+      "key": "Oto Fokus Lazer Kafası",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Lazer Kesim Uzman Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Yüksek Kalite Kesim Veri Tabanı",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Gaz Tasarruflu Stabil Akış Nozulu",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Maks. İvmelenme",
+      "value": "1G"
+    },
+    {
+      "key": "Maks. Hız",
+      "value": "140 m/dakika"
+    },
+    {
+      "key": "Tabla Taşıma Kapasitesi",
+      "value": "9400 kg"
+    },
+    {
+      "key": "Makine Dış Ölçüleri",
+      "value": "27500 x 4150 x 2150mm"
+    },
+    {
+      "key": "Kesim Tablası Ağırlığı",
+      "value": "9800 kg"
+    },
+    {
+      "key": "Toplam Ağırlık",
+      "value": "24500 kg"
+    },
+    {
+      "key": "Z Ekseni Mesafesi",
+      "value": "400 mm"
+    },
+    {
+      "key": "Konumlandırma Hassasiyeti",
+      "value": "±0.05 mm"
+    },
+    {
+      "key": "Tekrarlama Hassasiyeti",
+      "value": "±0.03 mm"
+    },
+    {
+      "key": "φ30 mm Dairesellik",
+      "value": "≤0.15 mm"
+    },
+    {
+      "key": "□30 mm Komşu Kenar Farkı",
+      "value": "≤0.1 mm"
+    },
+    {
+      "key": "Lazer Kafası",
+      "value": "BOCİ"
+    },
+    {
+      "key": "Lazer Kaynağı",
+      "value": "Raycus CE - TR Garantili"
+    },
+    {
+      "key": "Gövde Yapısı",
+      "value": "Luban Kilit Tipi Plaka Kaynaklı Gövde"
+    },
+    {
+      "key": "Köprü Yapısı",
+      "value": "Havacılık Tipi Alüminyum Köprü"
+    },
+    {
+      "key": "X, Y, Z Eksen Motor ve Sürücüleri",
+      "value": "Inovance"
+    },
+    {
+      "key": "Lineer Raylar",
+      "value": "PEK İtalya"
+    },
+    {
+      "key": "Kremayer Dişli",
+      "value": "LEITESEN Almanya"
+    },
+    {
+      "key": "Redüktör",
+      "value": "Modori"
+    },
+    {
+      "key": "Kontrol Sistemi",
+      "value": "FSCUT"
+    },
+    {
+      "key": "Harici Ekran",
+      "value": "27\" Dokunmatik Ekran"
+    },
+    {
+      "key": "Elektrik Aksamı",
+      "value": "Fransız Schneider"
+    },
+    {
+      "key": "Elektrikli Oransal Vana",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Oksijen Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Azot Gaz Kontrol Vanası",
+      "value": "Japon SMC"
+    },
+    {
+      "key": "Akıllı Alarm",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Otomatik Yağlama",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Soğutucu",
+      "value": "S&A"
+    },
+    {
+      "key": "Voltaj Regülatörü",
+      "value": "Mevcut"
+    },
+    {
+      "key": "Toplam Enerji",
+      "value": "114.25KVA/252.6A"
+    },
+    {
+      "key": "Tavsiye Edilen Kompresör Basınç",
+      "value": "???"
+    },
+    {
+      "key": "Kompresör Gücü",
+      "value": "???"
+    },
+    {
+      "key": "Emiş Fanı",
+      "value": "???"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-10T04:11:50.719Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T04:11:50.719Z"
+  },
+  "__v": 0
+}]

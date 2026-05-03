@@ -1,24 +1,22 @@
-const { loadEnvFile } = require("./loadEnv");
-const mongoose = require("mongoose");
+require("dotenv").config();
+
 const app = require("./app");
+const pool = require("./db/postgres");
 
-loadEnvFile();
+const PORT = process.env.PORT || 5000;
 
-const PORT = process.env.PORT || 4000;
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/laser_machine_app";
-
-async function start() {
+async function startServer() {
   try {
-    await mongoose.connect(MONGODB_URI);
-    console.log("MongoDB connected");
+    await pool.query("select now()");
+    console.log("PostgreSQL connected");
 
     app.listen(PORT, () => {
-      console.log(`Server running on http://localhost:${PORT}`);
+      console.log(`Server running on port ${PORT}`);
     });
   } catch (error) {
-    console.error("Failed to start server:", error.message);
+    console.error("Server startup error:", error);
     process.exit(1);
   }
 }
 
-start();
+startServer();

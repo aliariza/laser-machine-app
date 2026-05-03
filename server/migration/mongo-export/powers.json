@@ -1,0 +1,105 @@
+[{
+  "_id": {
+    "$oid": "69d6f67ca96d2d7d613d4f9a"
+  },
+  "name": "1.5KW",
+  "sortOrder": 0,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-09T00:44:44.394Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T00:44:44.394Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d6f695a96d2d7d613d4f9e"
+  },
+  "name": "2KW",
+  "sortOrder": 0,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-09T00:45:09.483Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T00:45:09.483Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d6f6a2a96d2d7d613d4fa2"
+  },
+  "name": "3KW",
+  "sortOrder": 0,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-09T00:45:22.221Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T00:45:22.221Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d6f6e0a96d2d7d613d4fa9"
+  },
+  "name": "6KW",
+  "sortOrder": 0,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-09T00:46:24.782Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T00:46:24.782Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d6f6eba96d2d7d613d4fad"
+  },
+  "name": "12KW",
+  "sortOrder": 0,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-09T00:46:35.435Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T00:46:35.435Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d6f6f4a96d2d7d613d4fb1"
+  },
+  "name": "20KW",
+  "sortOrder": 0,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-09T00:46:44.554Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T00:46:44.554Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d6f6fea96d2d7d613d4fb5"
+  },
+  "name": "30KW",
+  "sortOrder": 0,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-04-09T00:46:54.527Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T00:46:54.527Z"
+  },
+  "__v": 0
+}]

@@ -1,16 +1,13 @@
 const express = require("express");
 const ExcelJS = require("exceljs");
 const multer = require("multer");
-const router = express.Router();
-
-const Machine = require("../models/Machine");
-const Power = require("../models/Power");
-
-const upload = multer({ storage: multer.memoryStorage() });
-
 const path = require("path");
 const fs = require("fs");
-const mongoose = require("mongoose");
+
+const router = express.Router();
+const pool = require("../db/postgres");
+
+const upload = multer({ storage: multer.memoryStorage() });
 
 function normalizeSpecifications(specifications) {
   if (!Array.isArray(specifications)) return [];
@@ -28,7 +25,203 @@ function normalizePowerName(name) {
 }
 
 function isValidMachineId(id) {
-  return mongoose.isValidObjectId(id);
+  const value = String(id || "").trim();
+  return /^\d+$/.test(value) || /^[a-fA-F0-9]{24}$/.test(value);
+}
+
+function mongoOid(value) {
+  if (!value) return null;
+
+  if (typeof value === "string") return value;
+
+  if (typeof value === "object") {
+    if (value.$oid) return value.$oid;
+    if (value.toString && value.toString !== Object.prototype.toString) {
+      return value.toString();
+    }
+  }
+
+  return String(value);
+}
+
+function mapPower(row) {
+  if (!row || !row.power_id) return null;
+
+  return {
+    _id: row.power_legacy_mongo_id || String(row.power_id),
+    id: row.power_id,
+    legacyMongoId: row.power_legacy_mongo_id,
+    name: row.power_name,
+    sortOrder: row.power_sort_order,
+    isActive: row.power_is_active,
+  };
+}
+
+function mapMachine(row) {
+  const raw = row.raw_data || {};
+  const power = mapPower(row);
+
+  const machine = {
+    ...raw,
+
+    _id: row.legacy_mongo_id || String(row.id),
+    id: row.id,
+    legacyMongoId: row.legacy_mongo_id,
+
+    powerId: power || raw.powerId || null,
+
+    tableType: raw.tableType || "",
+    machineType: row.category || raw.machineType || "",
+    model: row.model || raw.model || "",
+    title: row.title || raw.title || "",
+    description: row.description || raw.description || "",
+    image: row.image || raw.image || "",
+    imagePath: raw.imagePath || row.image || "",
+
+    specifications: Array.isArray(raw.specifications)
+      ? raw.specifications
+      : Array.isArray(raw.specs)
+        ? raw.specs.map((spec) => ({
+            key: spec.key || spec.label || "",
+            value: spec.value || "",
+          }))
+        : [],
+
+    isActive:
+      typeof raw.isActive === "boolean"
+        ? raw.isActive
+        : row.is_published,
+
+    isPublished: row.is_published,
+
+    createdAt: row.created_at,
+    updatedAt: row.updated_at,
+  };
+
+  return machine;
+}
+
+async function getPowerById(powerId) {
+  const result = await pool.query(
+    `
+    SELECT *
+    FROM laser.powers
+    WHERE id::text = $1 OR legacy_mongo_id = $1
+    LIMIT 1
+    `,
+    [String(powerId)]
+  );
+
+  return result.rows[0] || null;
+}
+
+async function getPowerByName(name) {
+  const result = await pool.query(
+    `
+    SELECT *
+    FROM laser.powers
+    WHERE name = $1
+    LIMIT 1
+    `,
+    [normalizePowerName(name)]
+  );
+
+  return result.rows[0] || null;
+}
+
+async function createPowerByName(name) {
+  const normalizedName = normalizePowerName(name);
+
+  const result = await pool.query(
+    `
+    INSERT INTO laser.powers (
+      name,
+      sort_order,
+      is_active,
+      raw_data
+    )
+    VALUES ($1, 0, true, $2)
+    ON CONFLICT (name)
+    DO UPDATE SET
+      updated_at = NOW()
+    RETURNING *
+    `,
+    [
+      normalizedName,
+      JSON.stringify({
+        name: normalizedName,
+        sortOrder: 0,
+        isActive: true,
+      }),
+    ]
+  );
+
+  return result.rows[0];
+}
+
+async function queryMachines({ ids = null, filters = {} } = {}) {
+  const where = [];
+  const params = [];
+
+  if (ids && ids.length) {
+    params.push(ids);
+    where.push(`(m.id::text = ANY($${params.length}) OR m.legacy_mongo_id = ANY($${params.length}))`);
+  }
+
+  if (filters.powerId) {
+    params.push(String(filters.powerId));
+    where.push(`
+      (
+        m.raw_data->>'powerId' = $${params.length}
+        OR m.raw_data #>> '{powerId,$oid}' = $${params.length}
+      )
+    `);
+  }
+
+  if (filters.tableType) {
+    params.push(String(filters.tableType));
+    where.push(`m.raw_data->>'tableType' = $${params.length}`);
+  }
+
+  if (filters.machineType) {
+    params.push(String(filters.machineType));
+    where.push(`(m.category = $${params.length} OR m.raw_data->>'machineType' = $${params.length})`);
+  }
+
+  if (filters.model) {
+    params.push(`%${String(filters.model)}%`);
+    where.push(`m.model ILIKE $${params.length}`);
+  }
+
+  const sql = `
+    SELECT
+      m.*,
+      p.id AS power_id,
+      p.legacy_mongo_id AS power_legacy_mongo_id,
+      p.name AS power_name,
+      p.sort_order AS power_sort_order,
+      p.is_active AS power_is_active
+    FROM laser.machines m
+    LEFT JOIN laser.powers p
+      ON p.legacy_mongo_id = COALESCE(
+        m.raw_data #>> '{powerId,$oid}',
+        m.raw_data->>'powerId'
+      )
+      OR p.id::text = COALESCE(
+        m.raw_data #>> '{powerId,$oid}',
+        m.raw_data->>'powerId'
+      )
+    ${where.length ? `WHERE ${where.join(" AND ")}` : ""}
+    ORDER BY m.created_at DESC, m.id DESC
+  `;
+
+  const result = await pool.query(sql, params);
+  return result.rows.map(mapMachine);
+}
+
+async function getMachineById(id) {
+  const machines = await queryMachines({ ids: [String(id)] });
+  return machines[0] || null;
 }
 
 async function exportMachinesWorkbook(res, machines) {
@@ -69,6 +262,7 @@ async function exportMachinesWorkbook(res, machines) {
         footer: 0.2,
       },
     };
+
     ws.headerFooter = {
       differentOddEven: false,
       differentFirst: false,
@@ -186,7 +380,7 @@ async function exportMachinesWorkbook(res, machines) {
     ];
 
     let rowNo = 12;
-    rows.forEach((item, index) => {
+    rows.forEach((item, rowIndex) => {
       ws.mergeCells(`B${rowNo}:C${rowNo}`);
       ws.mergeCells(`D${rowNo}:E${rowNo}`);
 
@@ -194,7 +388,7 @@ async function exportMachinesWorkbook(res, machines) {
       const valueCell = ws.getCell(`D${rowNo}`);
       const midLeftCell = ws.getCell(`C${rowNo}`);
       const midRightCell = ws.getCell(`E${rowNo}`);
-      const isEvenRow = index % 2 === 0;
+      const isEvenRow = rowIndex % 2 === 0;
 
       nameCell.value = item.name;
       valueCell.value = item.value;
@@ -264,16 +458,9 @@ router.get("/", async (req, res) => {
   try {
     const { powerId, tableType, machineType, model } = req.query;
 
-    const filter = {};
-
-    if (powerId) filter.powerId = powerId;
-    if (tableType) filter.tableType = tableType;
-    if (machineType) filter.machineType = machineType;
-    if (model) filter.model = { $regex: model, $options: "i" };
-
-    const machines = await Machine.find(filter)
-      .populate("powerId")
-      .sort({ createdAt: -1 });
+    const machines = await queryMachines({
+      filters: { powerId, tableType, machineType, model },
+    });
 
     res.json(machines);
   } catch (error) {
@@ -289,9 +476,14 @@ router.post("/export/excel/selected", async (req, res) => {
       return res.status(400).json({ message: "Hiç makine seçilmedi" });
     }
 
-    const machines = await Machine.find({ _id: { $in: machineIds } })
-      .populate("powerId")
-      .sort({ createdAt: -1 });
+    const invalidMachineId = machineIds.find((id) => !isValidMachineId(id));
+    if (invalidMachineId) {
+      return res.status(400).json({ message: "Seçimde geçersiz makine kimliği var" });
+    }
+
+    const machines = await queryMachines({
+      ids: machineIds.map(String),
+    });
 
     if (!machines.length) {
       return res.status(404).json({ message: "Seçilen makineler bulunamadı" });
@@ -322,9 +514,7 @@ router.get("/export/excel/selected", async (req, res) => {
       return res.status(400).json({ message: "Seçimde geçersiz makine kimliği var" });
     }
 
-    const machines = await Machine.find({ _id: { $in: machineIds } })
-      .populate("powerId")
-      .sort({ createdAt: -1 });
+    const machines = await queryMachines({ ids: machineIds });
 
     if (!machines.length) {
       return res.status(404).json({ message: "Seçilen makineler bulunamadı" });
@@ -345,7 +535,7 @@ router.get("/export/excel/machine/:id", async (req, res) => {
       return res.status(400).json({ message: "Geçersiz makine kimliği" });
     }
 
-    const machine = await Machine.findById(req.params.id).populate("powerId");
+    const machine = await getMachineById(req.params.id);
 
     if (!machine) {
       return res.status(404).json({ message: "Makine bulunamadı" });
@@ -359,11 +549,17 @@ router.get("/export/excel/machine/:id", async (req, res) => {
 
 router.get("/export/excel/all", async (req, res) => {
   try {
-    const machines = await Machine.find().populate("powerId").sort({ createdAt: -1 });
+    const machines = await queryMachines();
 
-    const specKeys = [...new Set(
-      machines.flatMap((machine) => machine.specifications.map((spec) => spec.key))
-    )];
+    const specKeys = [
+      ...new Set(
+        machines.flatMap((machine) =>
+          Array.isArray(machine.specifications)
+            ? machine.specifications.map((spec) => spec.key)
+            : []
+        )
+      ),
+    ].filter(Boolean);
 
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet("Machines");
@@ -444,11 +640,7 @@ router.post("/import/excel", upload.single("file"), async (req, res) => {
         continue;
       }
 
-      const normalizedPowerName = normalizePowerName(rowData["Güç"]);
-      let power = await Power.findOne({ name: normalizedPowerName });
-      if (!power) {
-        power = await Power.create({ name: normalizedPowerName });
-      }
+      const power = await createPowerByName(rowData["Güç"]);
 
       const specifications = Object.keys(rowData)
         .filter(
@@ -457,15 +649,37 @@ router.post("/import/excel", upload.single("file"), async (req, res) => {
         .filter((key) => rowData[key])
         .map((key) => ({ key, value: rowData[key] }));
 
-      const machine = await Machine.create({
-        powerId: power._id,
+      const rawData = {
+        powerId: String(power.id),
         tableType: rowData["Tabla Tipi"],
         machineType: rowData["Makine Tipi"],
         model: rowData["Model"],
         specifications,
         isActive: rowData["Aktif"] ? rowData["Aktif"].toLowerCase() === "evet" : true,
-      });
+      };
 
+      const result = await pool.query(
+        `
+        INSERT INTO laser.machines (
+          category,
+          model,
+          title,
+          is_published,
+          raw_data
+        )
+        VALUES ($1,$2,$3,$4,$5)
+        RETURNING id
+        `,
+        [
+          rawData.machineType,
+          rawData.model,
+          rawData.model,
+          rawData.isActive,
+          JSON.stringify(rawData),
+        ]
+      );
+
+      const machine = await getMachineById(String(result.rows[0].id));
       imported.push(machine);
     }
 
@@ -484,7 +698,7 @@ router.get("/:id", async (req, res) => {
       return res.status(400).json({ message: "Geçersiz makine kimliği" });
     }
 
-    const machine = await Machine.findById(req.params.id).populate("powerId");
+    const machine = await getMachineById(req.params.id);
 
     if (!machine) {
       return res.status(404).json({ message: "Makine bulunamadı" });
@@ -498,29 +712,55 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-const { powerId, tableType, machineType, model, imagePath, specifications, isActive } = req.body;
+    const { powerId, tableType, machineType, model, imagePath, specifications, isActive } = req.body;
 
     if (!powerId || !tableType || !machineType || !model) {
       return res.status(400).json({ message: "powerId, tableType, machineType ve model zorunludur" });
     }
 
-    const power = await Power.findById(powerId);
+    const power = await getPowerById(powerId);
+
     if (!power) {
       return res.status(400).json({ message: "Geçersiz powerId" });
     }
 
-    const machine = await Machine.create({
-      powerId,
+    const cleanSpecs = normalizeSpecifications(specifications);
+
+    const rawData = {
+      powerId: power.legacy_mongo_id || String(power.id),
       tableType,
       machineType,
       model: String(model).trim(),
       imagePath: String(imagePath || "").trim(),
-      specifications: normalizeSpecifications(specifications),
+      specifications: cleanSpecs,
       isActive: typeof isActive === "boolean" ? isActive : true,
-    });
+    };
 
-    const populated = await Machine.findById(machine._id).populate("powerId");
-    res.status(201).json(populated);
+    const result = await pool.query(
+      `
+      INSERT INTO laser.machines (
+        category,
+        model,
+        title,
+        image,
+        is_published,
+        raw_data
+      )
+      VALUES ($1,$2,$3,$4,$5,$6)
+      RETURNING id
+      `,
+      [
+        rawData.machineType,
+        rawData.model,
+        rawData.model,
+        rawData.imagePath,
+        rawData.isActive,
+        JSON.stringify(rawData),
+      ]
+    );
+
+    const machine = await getMachineById(String(result.rows[0].id));
+    res.status(201).json(machine);
   } catch (error) {
     res.status(500).json({ message: "Makine oluşturulamadı", error: error.message });
   }
@@ -532,27 +772,69 @@ router.put("/:id", async (req, res) => {
       return res.status(400).json({ message: "Geçersiz makine kimliği" });
     }
 
-    const { powerId, tableType, machineType, model, imagePath, specifications, isActive } = req.body;
+    const existing = await getMachineById(req.params.id);
 
-    const updateData = {
-      powerId,
-      tableType,
-      machineType,
-      model: model ? String(model).trim() : model,
-      imagePath: String(imagePath || "").trim(),
-      specifications: normalizeSpecifications(specifications),
-      isActive,
-    };
-
-    const machine = await Machine.findByIdAndUpdate(req.params.id, updateData, {
-      new: true,
-      runValidators: true,
-    }).populate("powerId");
-
-    if (!machine) {
+    if (!existing) {
       return res.status(404).json({ message: "Makine bulunamadı" });
     }
 
+    const { powerId, tableType, machineType, model, imagePath, specifications, isActive } = req.body;
+
+    let power = null;
+
+    if (powerId) {
+      power = await getPowerById(powerId);
+
+      if (!power) {
+        return res.status(400).json({ message: "Geçersiz powerId" });
+      }
+    }
+
+    const rawData = {
+      ...(existing.raw_data || {}),
+      ...(existing || {}),
+      powerId: power ? power.legacy_mongo_id || String(power.id) : mongoOid(existing.powerId?._id || existing.powerId),
+      tableType,
+      machineType,
+      model: model ? String(model).trim() : existing.model,
+      imagePath: String(imagePath || "").trim(),
+      specifications: normalizeSpecifications(specifications),
+      isActive: typeof isActive === "boolean" ? isActive : true,
+    };
+
+    delete rawData.id;
+    delete rawData.legacyMongoId;
+
+    const result = await pool.query(
+      `
+      UPDATE laser.machines
+      SET
+        category = $1,
+        model = $2,
+        title = $3,
+        image = $4,
+        is_published = $5,
+        raw_data = $6,
+        updated_at = NOW()
+      WHERE id::text = $7 OR legacy_mongo_id = $7
+      RETURNING id
+      `,
+      [
+        rawData.machineType,
+        rawData.model,
+        rawData.model,
+        rawData.imagePath,
+        rawData.isActive,
+        JSON.stringify(rawData),
+        String(req.params.id),
+      ]
+    );
+
+    if (!result.rows.length) {
+      return res.status(404).json({ message: "Makine bulunamadı" });
+    }
+
+    const machine = await getMachineById(String(result.rows[0].id));
     res.json(machine);
   } catch (error) {
     res.status(500).json({ message: "Makine güncellenemedi", error: error.message });
@@ -565,9 +847,16 @@ router.delete("/:id", async (req, res) => {
       return res.status(400).json({ message: "Geçersiz makine kimliği" });
     }
 
-    const machine = await Machine.findByIdAndDelete(req.params.id);
+    const result = await pool.query(
+      `
+      DELETE FROM laser.machines
+      WHERE id::text = $1 OR legacy_mongo_id = $1
+      RETURNING id
+      `,
+      [String(req.params.id)]
+    );
 
-    if (!machine) {
+    if (!result.rows.length) {
       return res.status(404).json({ message: "Makine bulunamadı" });
     }
 
