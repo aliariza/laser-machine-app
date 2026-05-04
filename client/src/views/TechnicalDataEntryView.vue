@@ -13,7 +13,7 @@
           <div class="header-actions">
             <a
               class="manual-button"
-              href="/manuals/laser-machine-kullanim-kilavuzu.pdf"
+              href="/manuals/laser-machine-kullanim-kilavuzu.pdf?v=2"
               target="_blank"
               rel="noopener noreferrer"
             >
