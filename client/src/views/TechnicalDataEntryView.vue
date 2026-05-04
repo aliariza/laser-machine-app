@@ -10,16 +10,27 @@
           </p>
         </div>
         <div class="page-meta">
-          <button
-            type="button"
-            class="theme-toggle"
-            @click="toggleTheme"
-            :aria-label="theme === 'dark' ? 'Açık moda geç' : 'Koyu moda geç'"
-            :title="theme === 'dark' ? 'Açık mod' : 'Koyu mod'"
-          >
-            <Sun v-if="theme === 'dark'" :size="18" />
-            <Moon v-else :size="18" />
-          </button>
+          <div class="header-actions">
+            <a
+              class="manual-button"
+              href="/manuals/laser-machine-kullanim-kilavuzu.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Kullanım Kılavuzu
+            </a>
+
+            <button
+              type="button"
+              class="theme-toggle"
+              @click="toggleTheme"
+              :aria-label="theme === 'dark' ? 'Açık moda geç' : 'Koyu moda geç'"
+              :title="theme === 'dark' ? 'Açık mod' : 'Koyu mod'"
+            >
+              <Sun v-if="theme === 'dark'" :size="18" />
+              <Moon v-else :size="18" />
+            </button>
+          </div>
           <div class="page-stats">
             <div class="header-pill">
               <span>Kayıt</span>
@@ -307,7 +318,37 @@ onMounted(async () => {
   flex: 0 0 auto;
   stroke-width: 2.1;
 }
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
 
+.manual-button {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border-accent);
+  background: var(--bg-glass);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-soft);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.18s ease;
+}
+
+.manual-button:hover {
+  background: var(--bg-hover);
+  transform: translateY(-1px);
+}
 .header-pill {
   min-width: 108px;
   padding: 16px 18px;
@@ -426,6 +467,10 @@ onMounted(async () => {
     width: 100%;
     align-items: flex-start;
   }
+  .header-actions {
+  width: 100%;
+  justify-content: flex-start;
+  }
 }
 
 @media (max-width: 700px) {
@@ -485,5 +530,14 @@ onMounted(async () => {
   .page-credit {
     text-align: center;
   }
+  .header-actions {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 52px;
+}
+
+.manual-button {
+  width: 100%;
+}
 }
 </style>
