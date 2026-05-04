@@ -7,14 +7,21 @@ const machineRoutes = require("./routes/machines");
 const app = express();
 const corsOrigin = process.env.CORS_ORIGIN;
 
+const allowedOrigins = [
+  "https://laser-machine-app.vercel.app",
+  "https://laser-machine.tum-ex.com",
+];
+
 app.use(
-  cors(
-    corsOrigin
-      ? {
-          origin: corsOrigin.split(",").map((value) => value.trim()),
-        }
-      : undefined
-  )
+  cors({
+    origin(origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("Not allowed by CORS"));
+    },
+  })
 );
 app.use(express.json());
 
